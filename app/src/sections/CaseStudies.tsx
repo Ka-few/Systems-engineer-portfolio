@@ -2,7 +2,12 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { CheckCircle2, Server, Monitor, Database, Wifi, ExternalLink } from "lucide-react";
+import { CheckCircle2, Database, Wifi, ExternalLink, Github } from "lucide-react";
+
+interface TechTag {
+    label: string;
+    icon?: React.ReactNode;
+}
 
 interface CaseStudyProps {
     title: string;
@@ -11,10 +16,13 @@ interface CaseStudyProps {
     solution: string;
     highlights: string[];
     impact: string[];
+    techTags?: TechTag[];
+    githubUrl?: string;
+    liveUrl?: string;
     index: number;
 }
 
-function CaseStudyBlock({ title, category, problem, solution, highlights, impact, index }: CaseStudyProps) {
+function CaseStudyBlock({ title, category, problem, solution, highlights, impact, techTags, githubUrl, liveUrl, index }: CaseStudyProps) {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, margin: "-100px" });
 
@@ -70,17 +78,43 @@ function CaseStudyBlock({ title, category, problem, solution, highlights, impact
 
             {/* Footer / CTA */}
             <div className="px-8 py-6 bg-white/5 flex items-center justify-between border-t border-white/10">
-                <div className="flex gap-4">
-                    <div className="flex items-center gap-2 text-xs text-slate">
-                        <Database size={14} /> SQLite (Local)
-                    </div>
-                    <div className="flex items-center gap-2 text-xs text-slate">
-                        <Wifi size={14} /> LAN Sync
-                    </div>
+                <div className="flex gap-4 flex-wrap">
+                    {(techTags ?? [
+                        { label: "SQLite (Local)", icon: <Database size={14} /> },
+                        { label: "LAN Sync", icon: <Wifi size={14} /> },
+                    ]).map((tag, i) => (
+                        <div key={i} className="flex items-center gap-2 text-xs text-slate">
+                            {tag.icon}
+                            {tag.label}
+                        </div>
+                    ))}
                 </div>
-                <button className="flex items-center gap-2 text-sm font-semibold text-accent hover:text-white transition-colors">
-                    View Details <ExternalLink size={16} />
-                </button>
+                <div className="flex items-center gap-4">
+                    {githubUrl && (
+                        <a
+                            href={githubUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-2 text-sm font-semibold text-slate-light hover:text-white transition-colors"
+                        >
+                            GitHub <Github size={16} />
+                        </a>
+                    )}
+                    {liveUrl ? (
+                        <a
+                            href={liveUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-2 text-sm font-semibold text-accent hover:text-white transition-colors"
+                        >
+                            Live Demo <ExternalLink size={16} />
+                        </a>
+                    ) : (
+                        <button className="flex items-center gap-2 text-sm font-semibold text-accent hover:text-white transition-colors">
+                            View Details <ExternalLink size={16} />
+                        </button>
+                    )}
+                </div>
             </div>
         </motion.div>
     );
@@ -121,6 +155,33 @@ export default function CaseStudies() {
                 "Real-time visibility into property status",
                 "Simplified accounting workflow"
             ]
+        },
+        {
+            title: "Rental Property Business Intelligence Dashboard",
+            category: "Data Engineering & Analytics",
+            problem: "Property portfolio managers had raw CSV transaction data but no way to extract meaningful insight from it. Key metrics like occupancy rates, late payment trends, and revenue forecasts existed only as manual calculations in spreadsheets.",
+            solution: "Built a modern, interactive BI dashboard with Next.js 16 and Recharts that ingests raw CSV rental data server-side and renders live KPI cards, revenue forecasting charts, occupancy analysis, and payment distribution — all filterable by property and payment status.",
+            highlights: [
+                "Server-side CSV ingestion via PapaParse, eliminating the need for a database layer.",
+                "3-month moving-average revenue forecasting rendered as an area chart.",
+                "Stacked bar chart for late vs. on-time payments broken down per property.",
+                "Interactive slicer controls that update all charts simultaneously.",
+                "All monetary values displayed in Kenyan Shillings (KSh) with localised formatting."
+            ],
+            impact: [
+                "Instant visibility into portfolio health",
+                "Identified top late-paying properties",
+                "Enabled data-driven rent pricing decisions"
+            ],
+            techTags: [
+                { label: "Next.js 16" },
+                { label: "TypeScript" },
+                { label: "Recharts" },
+                { label: "Tailwind CSS v4" },
+                { label: "PapaParse" },
+            ],
+            githubUrl: "https://github.com/Ka-few/Rental-Property-Business-Intelligence-Dashboard",
+            liveUrl: "https://rental-property-business-intelligen.vercel.app/"
         }
     ];
 
