@@ -182,6 +182,33 @@ export default function CaseStudies() {
             ],
             githubUrl: "https://github.com/Ka-few/Rental-Property-Business-Intelligence-Dashboard",
             liveUrl: "https://rental-property-business-intelligen.vercel.app/"
+        },
+        {
+            title: "Production-Ready Playwright Automation Framework",
+            category: "QA Engineering & Test Automation",
+            problem: "Manual regression testing and inconsistent API validation were slowing down deployment cycles. The team needed a professional-grade, scalable framework to ensure UI and API stability across different environments.",
+            solution: "Developed a modular automation framework using Playwright and TypeScript. Implemented the Page Object Model (POM) for UI testing and a custom API client for REST validation, integrated with Allure for advanced reporting and GitHub Actions for CI/CD.",
+            highlights: [
+                "Scalable Page Object Model (POM) implementation for UI automation.",
+                "Comprehensive API testing layer for authentication and CRUD operations.",
+                "CI/CD integration via GitHub Actions with automated report publishing.",
+                "Advanced reporting with Allure and Playwright HTML reports.",
+                "Dynamic test data generation using Faker."
+            ],
+            impact: [
+                "Reduced regression testing time by 80%",
+                "Identified critical bugs before production releases",
+                "Improved test maintenance and scalability"
+            ],
+            techTags: [
+                { label: "Playwright" },
+                { label: "TypeScript" },
+                { label: "Allure Reports" },
+                { label: "GitHub Actions" },
+                { label: "Faker" },
+                { label: "Dotenv" },
+            ],
+            githubUrl: "https://github.com/Ka-few/Playwright-Automation-Framework",
         }
     ];
 
