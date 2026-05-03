@@ -245,7 +245,7 @@ export default function CaseStudies() {
                 <div className="label mb-2">◈ Featured Case Studies</div>
                 <h2 className="heading-lg mb-4">Enterprise Systems & Offline-First Architectures</h2>
                 <p className="text-slate max-w-2xl">
-                    Deep dives into high-impact systems designed for distributed operations, offline resilience, and multi-branch business ownership.
+                    Deep dives into high-impact systems designed for distributed operations, offline resilience, and multi-branch business ownership. Featuring 5 production-ready systems delivered for real-world enterprise workflows.
                 </p>
             </div>
 

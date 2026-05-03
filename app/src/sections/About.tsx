@@ -7,7 +7,7 @@ import { CheckCircle } from "lucide-react";
 
 const stats = [
     { value: "3+", label: "Years Building\nEnterprise Systems" },
-    { value: "2", label: "Production Apps\nDeployed" },
+    { value: "5", label: "Production Apps\nDeployed" },
     { value: "Multi", label: "Branch\nArchitecture" },
     { value: "100%", label: "Offline-First\nDesign" },
 ];
