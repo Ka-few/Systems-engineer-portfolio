@@ -184,41 +184,68 @@ export default function CaseStudies() {
             liveUrl: "https://rental-property-business-intelligen.vercel.app/"
         },
         {
-            title: "Production-Ready Playwright Automation Framework",
-            category: "QA Engineering & Test Automation",
-            problem: "Manual regression testing and inconsistent API validation were slowing down deployment cycles. The team needed a professional-grade, scalable framework to ensure UI and API stability across different environments.",
-            solution: "Developed a modular automation framework using Playwright and TypeScript. Implemented the Page Object Model (POM) for UI testing and a custom API client for REST validation, integrated with Allure for advanced reporting and GitHub Actions for CI/CD.",
+            title: "ShambaSmart Farm Management Application",
+            category: "Agricultural-Fintech Infrastructure",
+            problem: "Farmers often rely on fragmented tools or manual record-keeping, leading to poor visibility into farm operations, inaccurate financial tracking, and limited data-driven decision-making. Additionally, most digital solutions require constant internet access, which is unreliable in many rural environments.",
+            solution: "Developed a desktop-native farm management system using Tauri, React, TypeScript, and SQLite, designed with an ‘Agricultural-Fintech’ approach. Integrated an offline AI assistant powered by Ollama (Llama 3.1) to enable intelligent querying and analysis of farm data without internet dependency.",
             highlights: [
-                "Scalable Page Object Model (POM) implementation for UI automation.",
-                "Comprehensive API testing layer for authentication and CRUD operations.",
-                "CI/CD integration via GitHub Actions with automated report publishing.",
-                "Advanced reporting with Allure and Playwright HTML reports.",
-                "Dynamic test data generation using Faker."
+                "Offline-first architecture with SQLite for reliable local data persistence.",
+                "Rust-powered backend via Tauri for secure, high-performance native execution.",
+                "Integrated AI assistant with database tool-calling through Tauri IPC.",
+                "Interactive data visualization using Recharts for real-time farm analytics.",
+                "Dynamic PDF reporting system using jsPDF and AutoTable."
             ],
             impact: [
-                "Reduced regression testing time by 80%",
-                "Identified critical bugs before production releases",
-                "Improved test maintenance and scalability"
+                "Enabled fully offline farm operations and decision-making",
+                "Improved financial and production tracking accuracy",
+                "Reduced reliance on manual records and fragmented tools",
+                "Empowered farmers with AI-driven insights in real time"
             ],
             techTags: [
-                { label: "Playwright" },
+                { label: "Tauri" },
+                { label: "React" },
                 { label: "TypeScript" },
-                { label: "Allure Reports" },
-                { label: "GitHub Actions" },
-                { label: "Faker" },
-                { label: "Dotenv" },
+                { label: "SQLite" },
+                { label: "Ollama AI" },
+                { label: "jsPDF" },
             ],
-            githubUrl: "https://github.com/Ka-few/Playwright-Automation-Framework",
+        },
+        {
+            title: "Wine & Spirits Distributor App",
+            category: "Distribution & Retail Operations",
+            problem: "Wine and spirits distributors often struggle with disconnected systems for inventory, sales, customer management, and reporting. This leads to inefficiencies, inconsistent data, and difficulty scaling operations across retail and distribution channels.",
+            solution: "Built a comprehensive, monorepo-based distribution and retail management system combining backend services, desktop POS, and mobile applications. Designed to unify operations across inventory, sales, and customer management into a single cohesive platform.",
+            highlights: [
+                "Monorepo architecture with shared modules for consistency across platforms.",
+                "Backend REST API built with Node.js and Express, powered by Prisma ORM.",
+                "Desktop POS application using Tauri + React with sidecar backend integration.",
+                "Mobile application built with React Native (Expo) for remote access and field operations.",
+                "Shared workspace for reusable types, interfaces, and business logic."
+            ],
+            impact: [
+                "Centralized operations across multiple distribution channels",
+                "Improved inventory accuracy and sales tracking",
+                "Enhanced scalability through unified architecture",
+                "Streamlined workflows for both desktop and mobile users"
+            ],
+            techTags: [
+                { label: "Node.js" },
+                { label: "Express" },
+                { label: "Prisma" },
+                { label: "Tauri" },
+                { label: "React Native" },
+                { label: "Monorepo" },
+            ],
         }
     ];
 
     return (
         <section id="case-studies" className="section py-20">
             <div className="mb-12">
-                <div className="label mb-2">◈ Featured Work</div>
-                <h2 className="heading-lg mb-4">Case Studies</h2>
+                <div className="label mb-2">◈ Featured Case Studies</div>
+                <h2 className="heading-lg mb-4">Enterprise Systems & Offline-First Architectures</h2>
                 <p className="text-slate max-w-2xl">
-                    Deep dives into complex systems designed to solve real-world operational challenges for distributed businesses.
+                    Deep dives into high-impact systems designed for distributed operations, offline resilience, and multi-branch business ownership.
                 </p>
             </div>
 
