@@ -2,7 +2,7 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
-import { Database, Server, Laptop, ArrowRightLeft, ShieldCheck, Layers } from "lucide-react";
+import { Database, Server, Laptop, Brain, Bot, ArrowRightLeft } from "lucide-react";
 
 interface ComponentProps {
     id: string;
@@ -50,10 +50,10 @@ export default function ArchitectureShowcase() {
     return (
         <section id="architecture" className="section py-20 bg-navy/30">
             <div className="mb-16">
-                <div className="label mb-2">◈ System Design</div>
-                <h2 className="heading-lg mb-4">Architecture Showcase</h2>
+                <div className="label mb-2">◈ AI Systems Integration</div>
+                <h2 className="heading-lg mb-4">Intelligent Workflows</h2>
                 <p className="text-slate max-w-2xl">
-                    A visual look at how I design distributed systems to ensure data integrity and operational continuity.
+                    A look at how I integrate AI elements into business infrastructures — bridging operational data with natural language intelligence and automated decision-making.
                 </p>
             </div>
 
@@ -68,97 +68,103 @@ export default function ArchitectureShowcase() {
                     <div className="absolute inset-0 grid-texture opacity-30"></div>
 
                     <div className="relative z-10 w-[700px] lg:w-auto">
-                        <h3 className="heading-md mb-2">Distributed Sync Lifecycle</h3>
+                        <h3 className="heading-md mb-2">AI Workflow Lifecycle</h3>
                         <p className="text-sm text-slate">Hover over components to explore the architecture</p>
                     </div>
 
                     <div className="relative flex-1 min-w-[700px] lg:min-w-0">
                         {/* SVG Connections Layer */}
                         <svg className="absolute inset-0 w-full h-full pointer-events-none">
-                            {/* Lines from Branches to Switch */}
+                            {/* Line from Client to Orchestrator */}
                             <motion.path
-                                d="M 200,100 L 500,250"
-                                stroke="rgba(56, 189, 248, 0.2)"
-                                strokeWidth="2"
+                                d="M 200,250 L 500,250"
+                                stroke="rgba(245, 158, 11, 0.4)"
+                                strokeWidth="3"
                                 fill="none"
                                 initial={{ pathLength: 0 }}
                                 animate={isInView ? { pathLength: 1 } : {}}
                                 transition={{ duration: 1, delay: 0.5 }}
                             />
+                            {/* Line from Vector DB to Orchestrator */}
                             <motion.path
-                                d="M 200,250 L 500,250"
-                                stroke="rgba(56, 189, 248, 0.2)"
+                                d="M 500,100 L 500,250"
+                                stroke="rgba(245, 158, 11, 0.2)"
                                 strokeWidth="2"
+                                strokeDasharray="5,5"
                                 fill="none"
                                 initial={{ pathLength: 0 }}
                                 animate={isInView ? { pathLength: 1 } : {}}
                                 transition={{ duration: 1, delay: 0.7 }}
                             />
-                            <motion.path
-                                d="M 200,400 L 500,250"
-                                stroke="rgba(56, 189, 248, 0.2)"
-                                strokeWidth="2"
-                                fill="none"
-                                initial={{ pathLength: 0 }}
-                                animate={isInView ? { pathLength: 1 } : {}}
-                                transition={{ duration: 1, delay: 0.9 }}
-                            />
-                            {/* Line from Switch to Server */}
+                            {/* Line from Orchestrator to LLM */}
                             <motion.path
                                 d="M 500,250 L 800,250"
-                                stroke="rgba(56, 189, 248, 0.4)"
+                                stroke="rgba(244, 63, 94, 0.4)"
                                 strokeWidth="3"
                                 fill="none"
                                 initial={{ pathLength: 0 }}
                                 animate={isInView ? { pathLength: 1 } : {}}
                                 transition={{ duration: 1.2, delay: 1.5 }}
                             />
+                            {/* Line from Orchestrator to Action Engine */}
+                            <motion.path
+                                d="M 500,250 L 500,400"
+                                stroke="rgba(56, 189, 248, 0.3)"
+                                strokeWidth="2"
+                                strokeDasharray="5,5"
+                                fill="none"
+                                initial={{ pathLength: 0 }}
+                                animate={isInView ? { pathLength: 1 } : {}}
+                                transition={{ duration: 1, delay: 0.9 }}
+                            />
                         </svg>
 
                         {/* Components */}
                         <ArchitectureComponent
-                            id="branch1"
+                            id="client"
                             icon={Laptop}
-                            title="Branch Node A"
-                            description="Local Electron app with embedded SQLite database. Operates 100% offline."
-                            x="20%" y="20%"
-                        />
-                        <ArchitectureComponent
-                            id="branch2"
-                            icon={Laptop}
-                            title="Branch Node B"
-                            description="Synchronizes changes to central server via RESTful batches with retry logic."
+                            title="Operational Client"
+                            description="Business user queries system requesting analysis, reports, or workflow actions."
                             x="20%" y="50%"
-                        />
-                        <ArchitectureComponent
-                            id="branch3"
-                            icon={Laptop}
-                            title="Branch Node C"
-                            description="Handles conflict resolution locally using UUID record versioning."
-                            x="20%" y="80%"
                         />
 
                         <ArchitectureComponent
-                            id="switch"
-                            icon={ArrowRightLeft}
-                            title="Sync Orchestrator"
-                            description="Manages concurrent sync requests and enforces data validation rules."
+                            id="vectordb"
+                            icon={Database}
+                            title="Context / Vector DB"
+                            description="Retrieves domain-specific knowledge and historical business intelligence (RAG)."
+                            x="50%" y="20%"
+                        />
+
+                        <ArchitectureComponent
+                            id="orchestrator"
+                            icon={Brain}
+                            title="AI Orchestrator"
+                            description="Interprets user intent, fetches context, calls external models, and manages tools."
                             x="50%" y="50%"
                         />
 
                         <ArchitectureComponent
-                            id="server"
+                            id="action"
+                            icon={Bot}
+                            title="Action Engine"
+                            description="Executes tools, writes to databases, or triggers business logic based on AI decisions."
+                            x="50%" y="80%"
+                        />
+
+                        <ArchitectureComponent
+                            id="llm"
                             icon={Server}
-                            title="Central Owner Server"
-                            description="Aggregates data from all branches into a master PostgreSQL database."
+                            title="LLM API Edge"
+                            description="Cloud or local neural engine responsible for reasoning and natural language synthesis."
                             x="80%" y="50%"
                         />
                     </div>
 
                     <div className="relative z-10 flex gap-6 text-xs text-slate uppercase tracking-widest font-bold">
-                        <span className="flex items-center gap-2"><div className="w-2 h-2 rounded-full bg-emerald"></div> Data Integrity</span>
-                        <span className="flex items-center gap-2"><div className="w-2 h-2 rounded-full bg-accent"></div> Sync Active</span>
-                        <span className="flex items-center gap-2"><div className="w-2 h-2 rounded-full bg-slate"></div> Local Storage</span>
+                        <span className="flex items-center gap-2"><div className="w-2 h-2 rounded-full" style={{ background: "var(--accent)" }}></div> Request Flow</span>
+                        <span className="flex items-center gap-2"><div className="w-2 h-2 rounded-full" style={{ background: "var(--emerald)" }}></div> Model Inference</span>
+                        <span className="flex items-center gap-2"><div className="w-2 h-2 rounded-full" style={{ background: "var(--slate)" }}></div> Data Retrieval</span>
                     </div>
                 </motion.div>
             </div>

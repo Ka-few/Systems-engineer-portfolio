@@ -4,20 +4,26 @@
    DESIGN TOKENS
 ─────────────────────────────────────────────── */
 :root {
-  /* Brand */
-  --navy:        #0f172a;
-  --navy-dark:   #080f1e;
-  --navy-light:  #1e293b;
-  --accent:      #38bdf8;
-  --accent-glow: rgba(56, 189, 248, 0.25);
-  --emerald:     #10b981;
-  --emerald-glow: rgba(16, 185, 129, 0.2);
-  --slate:       #94a3b8;
-  --slate-light: #cbd5e1;
-  --white:       #f8fafc;
+  /* Brand - Warm Theme */
+  --navy: #292524;
+  /* warm dark gray */
+  --navy-dark: #1c1917;
+  /* very dark warm gray */
+  --navy-light: #44403c;
+  /* lighter warm gray */
+  --accent: #f59e0b;
+  /* warm amber */
+  --accent-glow: rgba(245, 158, 11, 0.25);
+  --emerald: #f43f5e;
+  /* warm rose */
+  --emerald-glow: rgba(244, 63, 94, 0.2);
+  --slate: #a8a29e;
+  /* warm slate */
+  --slate-light: #d6d3d1;
+  --white: #fafaf9;
 
   /* Glass */
-  --glass-bg:     rgba(255, 255, 255, 0.04);
+  --glass-bg: rgba(255, 255, 255, 0.04);
   --glass-border: rgba(255, 255, 255, 0.08);
 
   /* Sizes */
@@ -66,9 +72,18 @@ body {
 /* ───────────────────────────────────────────────
    SCROLLBAR
 ─────────────────────────────────────────────── */
-::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: var(--navy); }
-::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 3px; }
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--navy);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 3px;
+}
 
 /* ───────────────────────────────────────────────
    GLASSMORPHISM UTILITIES
@@ -109,7 +124,7 @@ body {
    GRADIENT TEXT
 ─────────────────────────────────────────────── */
 .text-gradient-accent {
-  background: linear-gradient(135deg, var(--accent) 0%, #818cf8 100%);
+  background: linear-gradient(135deg, var(--accent) 0%, #ea580c 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -238,8 +253,17 @@ body {
    ANIMATED GLOW PULSE
 ─────────────────────────────────────────────── */
 @keyframes pulse-glow {
-  0%, 100% { opacity: 1; box-shadow: 0 0 6px 2px #10b981; }
-  50%       { opacity: 0.6; box-shadow: 0 0 12px 4px #10b981; }
+
+  0%,
+  100% {
+    opacity: 1;
+    box-shadow: 0 0 6px 2px #10b981;
+  }
+
+  50% {
+    opacity: 0.6;
+    box-shadow: 0 0 12px 4px #10b981;
+  }
 }
 
 .pulse-glow {
@@ -248,10 +272,23 @@ body {
 
 /* Sync arrow animation */
 @keyframes flow-right {
-  0%   { stroke-dashoffset: 200; opacity: 0; }
-  20%  { opacity: 1; }
-  80%  { opacity: 1; }
-  100% { stroke-dashoffset: 0; opacity: 0; }
+  0% {
+    stroke-dashoffset: 200;
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 1;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+    opacity: 0;
+  }
 }
 
 .flow-line {

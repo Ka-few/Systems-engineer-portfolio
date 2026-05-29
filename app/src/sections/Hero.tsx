@@ -1,9 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Download, Server, Monitor, Wifi } from "lucide-react";
+import { ArrowRight, Download, Server, Monitor, Brain, Database, Network } from "lucide-react";
 
-function SyncArrow({ delay = 0 }: { delay?: number }) {
+function DataFlowArrow({ delay = 0, color = "#38bdf8" }: { delay?: number, color?: string }) {
     return (
         <motion.svg
             width="80"
@@ -13,11 +13,11 @@ function SyncArrow({ delay = 0 }: { delay?: number }) {
             style={{ flexShrink: 0 }}
         >
             {/* Base line */}
-            <line x1="0" y1="12" x2="70" y2="12" stroke="rgba(56,189,248,0.2)" strokeWidth="1.5" />
+            <line x1="0" y1="12" x2="70" y2="12" stroke={`${color}33`} strokeWidth="1.5" />
             {/* Animated flowing dash */}
             <motion.line
                 x1="0" y1="12" x2="70" y2="12"
-                stroke="#38bdf8"
+                stroke={color}
                 strokeWidth="1.5"
                 strokeDasharray="10 8"
                 initial={{ strokeDashoffset: 60, opacity: 0 }}
@@ -27,7 +27,7 @@ function SyncArrow({ delay = 0 }: { delay?: number }) {
             {/* Arrowhead */}
             <motion.path
                 d="M62 7 L70 12 L62 17"
-                stroke="#38bdf8"
+                stroke={color}
                 strokeWidth="1.5"
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -40,7 +40,7 @@ function SyncArrow({ delay = 0 }: { delay?: number }) {
     );
 }
 
-function BranchNode({ label, index }: { label: string; index: number }) {
+function InputNode({ label, index, icon: Icon, color = "#38bdf8" }: { label: string; index: number, icon: any, color?: string }) {
     return (
         <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -52,21 +52,21 @@ function BranchNode({ label, index }: { label: string; index: number }) {
                 gap: "0.5rem",
                 padding: "0.625rem 0.875rem",
                 background: "rgba(255,255,255,0.04)",
-                border: "1px solid rgba(56,189,248,0.2)",
+                border: `1px solid ${color}33`,
                 borderRadius: "8px",
-                minWidth: "130px",
+                minWidth: "150px",
             }}
         >
-            <Monitor size={16} color="#38bdf8" />
+            <Icon size={16} color={color} />
             <span style={{ fontSize: "0.75rem", color: "#cbd5e1", fontWeight: 500 }}>{label}</span>
             <div
                 style={{
                     width: "6px",
                     height: "6px",
                     borderRadius: "50%",
-                    background: "#10b981",
+                    background: color,
                     marginLeft: "auto",
-                    boxShadow: "0 0 6px #10b981",
+                    boxShadow: `0 0 6px ${color}`,
                 }}
             />
         </motion.div>
@@ -74,7 +74,11 @@ function BranchNode({ label, index }: { label: string; index: number }) {
 }
 
 export default function Hero() {
-    const branches = ["Branch A — Nairobi", "Branch B — Mombasa", "Branch C — Kisumu"];
+    const inputs = [
+        { label: "User Prompt", icon: Monitor, color: "#38bdf8" },
+        { label: "Vector Real-time DB", icon: Database, color: "#10b981" },
+        { label: "System Trigger", icon: Network, color: "#f59e0b" }
+    ];
 
     return (
         <section
@@ -125,7 +129,7 @@ export default function Hero() {
                         className="label"
                         style={{ marginBottom: "1rem" }}
                     >
-                        ◈ Business Systems Engineer
+                        ◈ Software Engineer
                     </motion.div>
 
                     <motion.h1
@@ -135,8 +139,7 @@ export default function Hero() {
                         className="heading-xl"
                         style={{ marginBottom: "0.75rem" }}
                     >
-                        I'm <span className="text-gradient-accent">Francis Njoroge,</span><br />
-                        Business Systems Engineer.
+                        I'm <span className="text-gradient-accent">Francis Njoroge.</span>
                     </motion.h1>
 
                     <motion.p
@@ -145,13 +148,13 @@ export default function Hero() {
                         transition={{ duration: 0.6, delay: 0.25 }}
                         style={{
                             fontSize: "clamp(1rem, 2vw, 1.2rem)",
-                            color: "var(--slate)",
+                            color: "var(--white)",
                             lineHeight: 1.7,
                             marginBottom: "1rem",
-                            fontWeight: 500,
+                            fontWeight: 700,
                         }}
                     >
-                        Offline-First &amp; Multi-Branch Software Architect
+                        Software Engineer | Distributed Systems &amp; AI Integration
                     </motion.p>
 
                     <motion.p
@@ -166,9 +169,7 @@ export default function Hero() {
                             maxWidth: "480px",
                         }}
                     >
-                        I architect practical desktop software for SMEs — systems that keep working
-                        even when the internet goes out, sync flawlessly across branches, and reflect
-                        real-world business workflows.
+                        I architect resilient operational infrastructure and practical AI implementations for SMEs — systems that effortlessly synchronize edge environments, automate workflows, and remain reliably available.
                     </motion.p>
 
                     <motion.div
@@ -205,7 +206,7 @@ export default function Hero() {
                         className="label"
                         style={{ marginBottom: "1.5rem", textAlign: "center" }}
                     >
-                        Live Architecture — Multi-Branch Sync
+                        Live Architecture — AI Automation Workflow
                     </div>
 
                     {/* Diagram */}
@@ -221,21 +222,21 @@ export default function Hero() {
                     >
                         {/* Branch nodes */}
                         <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem", flexShrink: 0 }}>
-                            {branches.map((b, i) => (
-                                <BranchNode key={b} label={b} index={i} />
+                            {inputs.map((input, i) => (
+                                <InputNode key={input.label} label={input.label} index={i} icon={input.icon} color={input.color} />
                             ))}
                         </div>
 
                         {/* Animated arrows */}
                         <div style={{ display: "flex", flexDirection: "column", gap: "1.35rem", flexShrink: 0 }}>
-                            {branches.map((_, i) => (
+                            {inputs.map((input, i) => (
                                 <div key={i} style={{ display: "flex", alignItems: "center" }}>
-                                    <SyncArrow delay={i * 0.7} />
+                                    <DataFlowArrow delay={i * 0.7} color={input.color} />
                                 </div>
                             ))}
                         </div>
 
-                        {/* Owner Server */}
+                        {/* AI Engine Server */}
                         <motion.div
                             initial={{ opacity: 0, scale: 0.8 }}
                             animate={{ opacity: 1, scale: 1 }}
@@ -246,16 +247,16 @@ export default function Hero() {
                                 alignItems: "center",
                                 gap: "0.5rem",
                                 padding: "1.25rem",
-                                background: "rgba(56,189,248,0.08)",
-                                border: "1px solid rgba(56,189,248,0.35)",
+                                background: "rgba(244,63,94,0.08)",
+                                border: "1px solid rgba(244,63,94,0.35)",
                                 borderRadius: "12px",
-                                minWidth: "100px",
+                                minWidth: "120px",
                                 flexShrink: 0
                             }}
                         >
-                            <Server size={28} color="#38bdf8" />
-                            <span style={{ fontSize: "0.7rem", color: "#38bdf8", fontWeight: 600, textAlign: "center" }}>
-                                Owner Server
+                            <Brain size={32} color="#f43f5e" />
+                            <span style={{ fontSize: "0.75rem", color: "#f43f5e", fontWeight: 700, textAlign: "center" }}>
+                                AI Engine
                             </span>
                             <div style={{ display: "flex", alignItems: "center", gap: "0.3rem" }}>
                                 <div
@@ -264,15 +265,15 @@ export default function Hero() {
                                         width: "7px",
                                         height: "7px",
                                         borderRadius: "50%",
-                                        background: "#10b981",
+                                        background: "#f43f5e",
                                     }}
                                 />
-                                <span style={{ fontSize: "0.65rem", color: "#10b981" }}>Syncing</span>
+                                <span style={{ fontSize: "0.65rem", color: "#f43f5e" }}>Processing</span>
                             </div>
                         </motion.div>
                     </div>
 
-                    {/* LAN / VPN badge */}
+                    {/* Tech badge */}
                     <motion.div
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
@@ -282,9 +283,10 @@ export default function Hero() {
                             display: "flex",
                             justifyContent: "center",
                             gap: "0.75rem",
+                            flexWrap: "wrap"
                         }}
                     >
-                        {["LAN Sync", "REST API", "Offline-First", "UUID Versioning"].map((tag) => (
+                        {["LLM APIs", "RAG Pipeline", "Function Calling", "Distributed Nodes"].map((tag) => (
                             <span
                                 key={tag}
                                 style={{
@@ -292,8 +294,8 @@ export default function Hero() {
                                     fontSize: "0.65rem",
                                     fontWeight: 600,
                                     color: "var(--accent)",
-                                    background: "rgba(56,189,248,0.08)",
-                                    border: "1px solid rgba(56,189,248,0.2)",
+                                    background: "rgba(245,158,11,0.08)",
+                                    border: "1px solid rgba(245,158,11,0.2)",
                                     borderRadius: "4px",
                                 }}
                             >

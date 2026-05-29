@@ -140,15 +140,22 @@ export default function CaseStudies() {
             ]
         },
         {
-            title: "Decentralized Rental Management System",
-            category: "Field Operations Infrastructure",
+            title: "Rental management system",
+            category: "Field Operations & AI Integration",
             problem: "Property caretakers in remote locations often lacked reliable internet, making it hard to track rent collection and maintenance requests. The owner required a centralized dashboard to track payment status without waiting for manual reports.",
-            solution: "Developed a caretaker-to-owner synchronization model. Caretakers use a lightweight offline-capable application. Data is versioned using UUIDs and timestamps, and uploaded to the owner's server through intermittent connections using a resilient retry mechanism.",
+            solution: "Developed an offline-first Caretaker-to-Owner synchronization model. Caretakers use a resilient local application featuring a privacy-focused local AI assistant (powered by Ollama) to instantly query operations and manage workflow without needing internet connectivity.",
             highlights: [
-                "Caretaker-to-Owner data aggregation model.",
-                "Role-based permission system for caretakers and accountants.",
-                "Resilient sync queue that handles intermittent mobile data connections.",
-                "Automated PDF financial statement generation."
+                "Offline AI Assistant - Chat with a privacy-focused local AI (powered by Ollama) to instantly query tenants, find debtors, record payments, and log maintenance.",
+                "Dashboard Analytics - Revenue trends and occupancy charts.",
+                "Search & Filter - Quickly find tenants by name, ID, or phone.",
+                "User Management - Securely change passwords from the Settings page.",
+                "Toast Notifications - Professional feedback for all actions.",
+                "Database Backup - Download and restore your data.",
+                "Receipt Printing - Generate payment receipts with company branding.",
+                "Bi-directional Sync - Sync data between Owner (Master) and Caretaker (Branch) computers.",
+                "Local SQLite DB - Each machine maintains its own local copy of the database.",
+                "Incremental Updates - Periodic background sync (every 3h) of only new/modified records.",
+                "File & Image Sync - Automatic transfer of maintenance photos and receipts."
             ],
             impact: [
                 "Reduced payment delays by 40%",
