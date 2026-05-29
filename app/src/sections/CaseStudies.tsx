@@ -137,7 +137,8 @@ export default function CaseStudies() {
                 "Eliminated manual spreadsheet reconciliation",
                 "99.9% availability during ISP outages",
                 "30% faster checkout process"
-            ]
+            ],
+            githubUrl: "https://github.com/Ka-few/Mwas-beauty-app"
         },
         {
             title: "Rental management system",
@@ -161,7 +162,8 @@ export default function CaseStudies() {
                 "Reduced payment delays by 40%",
                 "Real-time visibility into property status",
                 "Simplified accounting workflow"
-            ]
+            ],
+            githubUrl: "https://github.com/Ka-few/rental-mgt-system"
         },
         {
             title: "Rental Property Business Intelligence Dashboard",
@@ -216,6 +218,7 @@ export default function CaseStudies() {
                 { label: "Ollama AI" },
                 { label: "jsPDF" },
             ],
+            githubUrl: "https://github.com/Ka-few/farm-mgt-app"
         },
         {
             title: "Wine & Spirits Distributor App",
@@ -243,6 +246,7 @@ export default function CaseStudies() {
                 { label: "React Native" },
                 { label: "Monorepo" },
             ],
+            githubUrl: "https://github.com/Ka-few/wines-and-spirits-distributor-app"
         }
     ];
 
