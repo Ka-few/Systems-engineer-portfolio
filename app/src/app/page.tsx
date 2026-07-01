@@ -15,7 +15,7 @@ export default function Home() {
     "@type": "Person",
     name: "Francis Njoroge Wanjiru",
     alternateName: "Francis Njoroge",
-    jobTitle: "Business Systems Engineer",
+    jobTitle: "Full Stack Product Engineer",
     url: "https://francisnjoroge.com",
     sameAs: [
       "https://www.linkedin.com/in/francis-njoroge-31698181",

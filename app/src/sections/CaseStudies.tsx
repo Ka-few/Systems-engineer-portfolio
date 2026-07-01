@@ -166,31 +166,32 @@ export default function CaseStudies() {
             githubUrl: "https://github.com/Ka-few/rental-mgt-system"
         },
         {
-            title: "Rental Property Business Intelligence Dashboard",
-            category: "Data Engineering & Analytics",
-            problem: "Property portfolio managers had raw CSV transaction data but no way to extract meaningful insight from it. Key metrics like occupancy rates, late payment trends, and revenue forecasts existed only as manual calculations in spreadsheets.",
-            solution: "Built a modern, interactive BI dashboard with Next.js 16 and Recharts that ingests raw CSV rental data server-side and renders live KPI cards, revenue forecasting charts, occupancy analysis, and payment distribution — all filterable by property and payment status.",
+            title: "Bull Semen Catalog & AI Logistics Platform",
+            category: "Agricultural Logistics & Platform",
+            problem: "Farmers needed a way to browse a catalog of high-quality bull semen, place orders, and coordinate artificial insemination (AI) services with certified vets and suppliers.",
+            solution: "Developed a comprehensive digital platform connecting dairy farmers with top-tier genetics, certified veterinary professionals, and agricultural semen suppliers. The application handles the entire logistics pipeline.",
             highlights: [
-                "Server-side CSV ingestion via PapaParse, eliminating the need for a database layer.",
-                "3-month moving-average revenue forecasting rendered as an area chart.",
-                "Stacked bar chart for late vs. on-time payments broken down per property.",
-                "Interactive slicer controls that update all charts simultaneously.",
-                "All monetary values displayed in Kenyan Shillings (KSh) with localised formatting."
+                "Role-Based Access Control (RBAC) with distinct dashboards for Farmers, Vets, Agri-Suppliers, and Admins.",
+                "Geospatial Logistics integrating Leaflet maps to visually pinpoint delivery locations and match vets/suppliers based on coordinates.",
+                "Inventory Management where suppliers maintain localized stock that updates dynamically.",
+                "Full end-to-end Order Tracking (pending, allocated, fetched_by_vet, completed)."
             ],
             impact: [
-                "Instant visibility into portfolio health",
-                "Identified top late-paying properties",
-                "Enabled data-driven rent pricing decisions"
+                "Streamlined agricultural logistics pipeline",
+                "Enabled precise geospatial matching of vets and farmers",
+                "Improved localized inventory tracking for suppliers"
             ],
             techTags: [
-                { label: "Next.js 16" },
+                { label: "React" },
                 { label: "TypeScript" },
-                { label: "Recharts" },
-                { label: "Tailwind CSS v4" },
-                { label: "PapaParse" },
+                { label: "Vite" },
+                { label: "TailwindCSS" },
+                { label: "Leaflet" },
+                { label: "Node.js" },
+                { label: "Express.js" },
+                { label: "SQLite3" },
             ],
-            githubUrl: "https://github.com/Ka-few/Rental-Property-Business-Intelligence-Dashboard",
-            liveUrl: "https://rental-property-business-intelligen.vercel.app/"
+            githubUrl: "https://github.com/Ka-few/Bull-Semen-Catalog"
         },
         {
             title: "ShambaSmart Farm Management Application",

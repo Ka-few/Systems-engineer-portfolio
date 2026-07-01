@@ -1,4 +1,4 @@
-# Francis Njoroge Wanjiru - Business Systems Engineer Portfolio
+# Francis Njoroge Wanjiru - Full Stack Product Engineer Portfolio
 
 A modern, enterprise-level portfolio website showcasing expertise in offline-first and multi-branch desktop application development. Built with cutting-edge web technologies to demonstrate architectural excellence and practical business software solutions.
 
@@ -24,7 +24,7 @@ A modern, enterprise-level portfolio website showcasing expertise in offline-fir
 
 ### Hero Section
 - Animated architecture diagram (Branch PCs → Server sync)
-- Professional positioning as Business Systems Engineer
+- Professional positioning as Full Stack Product Engineer
 - Call-to-action buttons for case studies and resume
 
 ### About Section
@@ -130,7 +130,7 @@ vercel
 
 ## 👨‍💻 About the Developer
 
-**Francis Njoroge Wanjiru** is a Business Systems Engineer specializing in offline-first and multi-branch desktop applications. With 3+ years of experience building enterprise systems, he focuses on creating practical software that works in real-world business environments, especially for small and medium enterprises operating across distributed locations.
+**Francis Njoroge Wanjiru** is a Full Stack Product Engineer who bridges the gap between engineering and product strategy. With 3+ years of experience building end-to-end digital solutions, he focuses on taking ownership of the product lifecycle to deliver scalable applications with intuitive user experiences and measurable business value.
 
 ## 📄 License
 

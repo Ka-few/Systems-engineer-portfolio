@@ -13,15 +13,15 @@ const spaceGrotesk = Space_Grotesk({
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://francisnjoroge.com"),
   title: {
-    default: "Francis Njoroge | Business Systems Engineer",
+    default: "Francis Njoroge | Full Stack Product Engineer",
     template: "%s | Francis Njoroge",
   },
   description:
-    "Portfolio of Francis Njoroge, a Business Systems Engineer specializing in offline-first architecture, distributed data sync, and multi-branch desktop applications for SMEs in Kenya and beyond.",
+    "Portfolio of Francis Njoroge, a Full Stack Product Engineer specializing in building scalable web applications, end-to-end digital products, and intuitive user experiences that drive business growth.",
   keywords: [
     "Francis Njoroge",
+    "Full Stack Product Engineer",
     "Francis Njoroge Wanjiru",
-    "Business Systems Engineer",
     "Software Engineer Kenya",
     "Offline-First Architecture",
     "Multi-Branch Software",
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_IE",
     url: "/",
-    title: "Francis Njoroge | Business Systems Engineer",
+    title: "Francis Njoroge | Full Stack Product Engineer",
     description: "Explore the portfolio of Francis Njoroge, showcasing enterprise-level system architecture, offline-first web apps, and reliable software for SMEs.",
     siteName: "Francis Njoroge Portfolio",
     images: [
@@ -46,14 +46,14 @@ export const metadata: Metadata = {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Francis Njoroge - Business Systems Engineer Portfolio",
+        alt: "Francis Njoroge - Full Stack Product Engineer Portfolio",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Francis Njoroge | Business Systems Engineer",
-    description: "Portfolio of Francis Njoroge, building robust systems for SMEs.",
+    title: "Francis Njoroge | Full Stack Product Engineer",
+    description: "Portfolio of Francis Njoroge, a Full Stack Product Engineer specializing in offline-first architecture.",
     images: ["/og-image.jpg"],
   },
   robots: {

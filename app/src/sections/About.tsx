@@ -6,26 +6,26 @@ import { useRef } from "react";
 import { CheckCircle } from "lucide-react";
 
 const corePrinciples = [
-    "Offline-first systems that remain operational during connectivity loss",
-    "Distributed synchronization across branches and edge devices",
-    "Reliable data consistency and fault-tolerant workflows",
-    "Secure role-based operational boundaries",
-    "Real-time operational visibility and monitoring",
-    "AI-assisted analytics and intelligent workflow automation",
-    "Practical deployment architectures for resource-constrained environments"
+    "End-to-end product ownership from conception to deployment",
+    "User-centric design focused on intuitive, seamless experiences",
+    "Reliable, offline-capable architectures for real-world environments",
+    "Rapid iteration aligned with business goals and user feedback",
+    "Robust data consistency and scalable full-stack architecture",
+    "AI-assisted features that drive tangible operational value",
+    "Seamless integration of frontend aesthetics with backend reliability"
 ];
 
 const focuses = [
-    "Distributed Systems Architecture",
-    "Offline-First Application Design",
-    "AI-Assisted Business Systems",
-    "Observability & Reliability Engineering",
+    "Full-Stack Product Development",
+    "Product Strategy & UX Design",
+    "Offline-First Application Architecture",
+    "AI-Assisted Business Tools",
     "API & Systems Integration",
-    "PostgreSQL, SQLite & Data Engineering",
-    "Networked Desktop Applications",
-    "Automation & Operational Tooling",
-    "Cloud & Infrastructure Engineering",
-    "Real-Time Sync Architectures"
+    "Data Engineering & Analytics",
+    "Networked Desktop & Web Apps",
+    "Rapid Prototyping & Iteration",
+    "Cloud & Infrastructure Architecture",
+    "User-Centric Problem Solving"
 ];
 
 export default function About() {
@@ -83,7 +83,7 @@ export default function About() {
                                 fontSize: "1.05rem",
                             }}
                         >
-                            I design and build resilient business software engineered for real-world operational environments — systems that continue running under unreliable networks, scale across multiple locations, and increasingly leverage AI to automate decision-making and operational insight.
+                            I design and build end-to-end digital products engineered to solve real-world operational problems. By blending technical depth with a strong product mindset, I create intuitive applications that deliver measurable business value and exceptional user experiences.
                         </motion.p>
 
                         <motion.p
@@ -97,7 +97,7 @@ export default function About() {
                                 fontSize: "1.05rem",
                             }}
                         >
-                            My work sits at the intersection of software engineering, distributed systems, Site Reliability Engineering (SRE), and practical AI integration.
+                            My work sits at the intersection of full-stack engineering, product strategy, and practical AI integration—taking ownership of the entire product lifecycle from initial conception to scalable deployment.
                         </motion.p>
 
                         <motion.p
@@ -111,7 +111,7 @@ export default function About() {
                                 fontSize: "1.05rem",
                             }}
                         >
-                            I specialize in building infrastructure-grade applications for SMEs and operational businesses — platforms where uptime, synchronization, observability, and workflow reliability matter just as much as features.
+                            I specialize in building robust platforms for SMEs and fast-growing businesses—ensuring that every feature not only works flawlessly under the hood but directly addresses user needs and drives operational growth.
                         </motion.p>
 
                         <motion.div
@@ -127,7 +127,7 @@ export default function About() {
                             }}
                         >
                             <h4 style={{ color: "var(--white)", fontWeight: 700, marginBottom: "0.5rem" }}>My engineering philosophy is simple:</h4>
-                            <p style={{ color: "var(--accent)" }}><em>Software should behave like reliable infrastructure.</em></p>
+                            <p style={{ color: "var(--accent)" }}><em>Build products that users love, and businesses can rely on.</em></p>
                         </motion.div>
 
                         <motion.p
@@ -217,7 +217,7 @@ export default function About() {
                                 fontSize: "1rem",
                             }}
                         >
-                            My current work focuses on integrating AI into business infrastructure systems — enabling organizations to interact with operational, financial, and transactional data through intelligent assistants, automated insights, anomaly detection, and natural-language querying.
+                            My current work focuses on building comprehensive digital platforms and integrating AI into business products — bridging the gap between complex engineering challenges and intuitive user experiences to deliver scalable, high-impact solutions.
                         </motion.p>
 
                         <h3

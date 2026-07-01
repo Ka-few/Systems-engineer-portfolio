@@ -129,7 +129,7 @@ export default function Hero() {
                         className="label"
                         style={{ marginBottom: "1rem" }}
                     >
-                        ◈ Software Engineer
+                        ◈ Full Stack Product Engineer
                     </motion.div>
 
                     <motion.h1
@@ -154,7 +154,7 @@ export default function Hero() {
                             fontWeight: 700,
                         }}
                     >
-                        Software Engineer | Distributed Systems &amp; AI Integration
+                        Full Stack Product Engineer | Distributed Systems &amp; AI Integration
                     </motion.p>
 
                     <motion.p
@@ -169,7 +169,7 @@ export default function Hero() {
                             maxWidth: "480px",
                         }}
                     >
-                        I architect resilient operational infrastructure and practical AI implementations for SMEs — systems that effortlessly synchronize edge environments, automate workflows, and remain reliably available.
+                        I build robust, full-stack digital products from the ground up — combining technical excellence with a deep focus on user experience, rapid iteration, and delivering measurable business impact.
                     </motion.p>
 
                     <motion.div
