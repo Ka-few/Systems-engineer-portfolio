@@ -74,7 +74,7 @@ export default function TechStack() {
                 <div className="label mb-2">◈ My Stack</div>
                 <h2 className="heading-lg mb-4">Development Toolkit</h2>
                 <p className="text-slate max-w-2xl">
-                    A structured selection of technologies chosen for stability, offline capability, and enterprise reliability.
+                    A curated toolkit for building scalable full-stack web products — chosen for developer productivity, reliability, and real-world deployment.
                 </p>
             </div>
 

@@ -3,53 +3,54 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import {
-    WifiOff, RefreshCw, Shield, Network, BarChart3, Monitor
+    Layers, Code2, Cpu, Globe, ShieldCheck, Rocket
 } from "lucide-react";
 
 const expertise = [
     {
-        icon: WifiOff,
-        title: "Offline-First Architecture",
+        icon: Layers,
+        title: "Full-Stack Web Development",
         description:
-            "Systems designed to function fully without network connectivity — local-first data storage with intelligent sync when connection is restored.",
+            "End-to-end product delivery across the stack — React, Next.js, and TypeScript on the frontend paired with Node.js/Express REST APIs and relational databases on the backend.",
         color: "#38bdf8",
     },
     {
-        icon: RefreshCw,
-        title: "Distributed Data Sync",
+        icon: Code2,
+        title: "Product Engineering & Iteration",
         description:
-            "UUID-based record versioning, last-write-wins conflict resolution, and REST-API synchronization across branch nodes and central servers.",
+            "Translating user needs and business goals into working software. Rapid prototyping, feature scoping, and iterating based on feedback to ship products that users actually love.",
         color: "#818cf8",
     },
     {
-        icon: Shield,
-        title: "Role-Based Access Systems",
+        icon: Globe,
+        title: "API Design & Systems Integration",
         description:
-            "Granular permission models enforcing operational hierarchy — cashiers, managers, caretakers, and owners each see exactly what they need.",
+            "Designing clean, versioned REST APIs and integrating third-party services — from payment gateways and maps (Leaflet/Google Maps) to AI APIs and geospatial data pipelines.",
         color: "#f472b6",
     },
     {
-        icon: Network,
-        title: "LAN/VPN Infrastructure",
+        icon: Cpu,
+        title: "AI-Assisted Product Features",
         description:
-            "Local Area Network topology design for branch-to-server communication, including VPN tunneling for geographically distributed branches.",
+            "Integrating practical AI capabilities into real products — local LLMs via Ollama, LLM APIs, RAG pipelines, natural-language querying, and intelligent workflow automation.",
         color: "#fb923c",
     },
     {
-        icon: BarChart3,
-        title: "Financial & Operational Automation",
+        icon: ShieldCheck,
+        title: "Role-Based Auth & Data Integrity",
         description:
-            "Commission calculation engines, inventory tracking, expenditure management, and automated reporting for business owners.",
+            "Implementing secure, granular RBAC systems, JWT/session authentication, and robust data consistency — ensuring every user sees exactly what they need, nothing more.",
         color: "#10b981",
     },
     {
-        icon: Monitor,
-        title: "Desktop Application Engineering",
+        icon: Rocket,
+        title: "Deployment & Scalable Architecture",
         description:
-            "Cross-platform Electron-based desktop apps with embedded databases, packaged for Windows and Linux deployment in SME environments.",
+            "Shipping products to production on Vercel, Railway, and VPS environments. Offline-first architectures, distributed sync, Docker, and Nginx for reliable, scalable delivery.",
         color: "#fbbf24",
     },
 ];
+
 
 export default function Expertise() {
     const ref = useRef<HTMLDivElement>(null);
@@ -97,8 +98,8 @@ export default function Expertise() {
                         lineHeight: 1.7,
                     }}
                 >
-                    Specialized in the full stack of multi-branch, offline-first system design —
-                    from database architecture to desktop deployment.
+                    From product conception to scalable deployment — the full-stack capabilities that power
+                    end-to-end digital products with real business impact.
                 </motion.p>
 
                 <div
