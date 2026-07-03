@@ -191,7 +191,8 @@ export default function CaseStudies() {
                 { label: "Express.js" },
                 { label: "SQLite3" },
             ],
-            githubUrl: "https://github.com/Ka-few/Bull-Semen-Catalog"
+            githubUrl: "https://github.com/Ka-few/Bull-Semen-Catalog",
+            liveUrl: "https://digital-bull-catalog-amber.vercel.app/"
         },
         {
             title: "ShambaSmart Farm Management Application",
