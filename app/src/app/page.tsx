@@ -5,8 +5,8 @@ import Expertise from "@/sections/Expertise";
 import CaseStudies from "@/sections/CaseStudies";
 import ArchitectureShowcase from "@/sections/ArchitectureShowcase";
 import TechStack from "@/sections/TechStack";
+import Experience from "@/sections/Experience";
 import Philosophy from "@/sections/Philosophy";
-import CurrentlyBuilding from "@/sections/CurrentlyBuilding";
 import Contact from "@/sections/Contact";
 
 export default function Home() {
@@ -15,7 +15,7 @@ export default function Home() {
     "@type": "Person",
     name: "Francis Njoroge Wanjiru",
     alternateName: "Francis Njoroge",
-    jobTitle: "Full Stack Product Engineer",
+    jobTitle: "Full Stack Software Engineer",
     url: "https://francisnjoroge.com",
     sameAs: [
       "https://www.linkedin.com/in/francis-njoroge-31698181",
@@ -24,14 +24,24 @@ export default function Home() {
     email: "mailto:francisnjorogedev@gmail.com",
     telephone: "+254724015861",
     knowsAbout: [
-      "Software Engineering",
-      "System Architecture",
-      "Offline-First Architecture",
+      "Full Stack Software Engineering",
+      "AI-Powered Applications",
+      "Conversational AI",
+      "Twilio",
+      "WhatsApp Business API",
       "React",
       "Next.js",
       "TypeScript",
-      "SQLite",
-      "Desktop Applications"
+      "Node.js",
+      "Python",
+      "GraphQL",
+      "REST APIs",
+      "PostgreSQL",
+      "Enterprise Business Systems",
+      "LLM Integration",
+      "OpenAI API",
+      "Prompt Engineering",
+      "GitHub Copilot",
     ],
   };
 
@@ -54,8 +64,8 @@ export default function Home() {
         <CaseStudies />
         <ArchitectureShowcase />
         <TechStack />
+        <Experience />
         <Philosophy />
-        <CurrentlyBuilding />
         <Contact />
       </div>
 

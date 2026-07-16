@@ -7,9 +7,9 @@ import { Menu, X, Terminal } from "lucide-react";
 const navLinks = [
     { label: "About", href: "#about" },
     { label: "Expertise", href: "#expertise" },
-    { label: "Case Studies", href: "#case-studies" },
-    { label: "Architecture", href: "#architecture" },
+    { label: "Projects", href: "#case-studies" },
     { label: "Stack", href: "#stack" },
+    { label: "Experience", href: "#experience" },
     { label: "Contact", href: "#contact" },
 ];
 

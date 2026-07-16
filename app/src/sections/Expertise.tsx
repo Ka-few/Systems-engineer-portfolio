@@ -3,50 +3,50 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import {
-    Layers, Code2, Cpu, Globe, ShieldCheck, Rocket
+    Layers, MessageSquare, Globe, Brain, ShieldCheck, Rocket
 } from "lucide-react";
 
 const expertise = [
     {
         icon: Layers,
-        title: "Full-Stack Web Development",
+        title: "Full Stack Web Development",
         description:
-            "End-to-end product delivery across the stack — React, Next.js, and TypeScript on the frontend paired with Node.js/Express REST APIs and relational databases on the backend.",
+            "End-to-end delivery across the stack — React, Next.js, and TypeScript on the frontend paired with Node.js, Express, and Python (Flask/Django) on the backend. Reusable component libraries, Redux/Zustand state management, and scalable frontend architectures.",
         color: "#38bdf8",
     },
     {
-        icon: Code2,
-        title: "Product Engineering & Iteration",
+        icon: MessageSquare,
+        title: "Conversational AI & Twilio",
         description:
-            "Translating user needs and business goals into working software. Rapid prototyping, feature scoping, and iterating based on feedback to ship products that users actually love.",
-        color: "#818cf8",
+            "Building intelligent messaging platforms using Twilio WhatsApp Business API, webhook-driven chatbots, AI assistants with LLM integration, appointment booking systems, and automated customer engagement pipelines.",
+        color: "#25d366",
     },
     {
         icon: Globe,
-        title: "API Design & Systems Integration",
+        title: "GraphQL & REST API Design",
         description:
-            "Designing clean, versioned REST APIs and integrating third-party services — from payment gateways and maps (Leaflet/Google Maps) to AI APIs and geospatial data pipelines.",
+            "Designing clean, versioned REST and GraphQL APIs — schema-first development, efficient resolvers, data loaders, JWT authentication, webhook integrations, and third-party service connections for enterprise-grade systems.",
         color: "#f472b6",
     },
     {
-        icon: Cpu,
-        title: "AI-Assisted Product Features",
+        icon: Brain,
+        title: "AI-Powered Application Development",
         description:
-            "Integrating practical AI capabilities into real products — local LLMs via Ollama, LLM APIs, RAG pipelines, natural-language querying, and intelligent workflow automation.",
+            "Integrating AI into real products — OpenAI API, LLM orchestration, prompt engineering, RAG pipelines, AI assistants, and natural-language querying. Using GitHub Copilot, Claude, and Cursor AI to accelerate development velocity.",
         color: "#fb923c",
     },
     {
         icon: ShieldCheck,
-        title: "Role-Based Auth & Data Integrity",
+        title: "Enterprise Business Systems",
         description:
-            "Implementing secure, granular RBAC systems, JWT/session authentication, and robust data consistency — ensuring every user sees exactly what they need, nothing more.",
+            "Building multi-user enterprise platforms with granular RBAC, JWT/session authentication, multi-tenant architecture, audit trails, POS systems, CRM workflows, financial dashboards, and business reporting modules.",
         color: "#10b981",
     },
     {
         icon: Rocket,
-        title: "Deployment & Scalable Architecture",
+        title: "DevOps & Modern Deployment",
         description:
-            "Shipping products to production on Vercel, Railway, and VPS environments. Offline-first architectures, distributed sync, Docker, and Nginx for reliable, scalable delivery.",
+            "Shipping to production on Vercel, Railway, and VPS environments using Docker, GitHub Actions CI/CD, Linux administration, Nginx configuration, and environment management for reliable, scalable delivery.",
         color: "#fbbf24",
     },
 ];
@@ -93,13 +93,12 @@ export default function Expertise() {
                     style={{
                         color: "var(--slate)",
                         marginBottom: "3rem",
-                        maxWidth: "600px",
+                        maxWidth: "620px",
                         fontSize: "1.05rem",
                         lineHeight: 1.7,
                     }}
                 >
-                    From product conception to scalable deployment — the full-stack capabilities that power
-                    end-to-end digital products with real business impact.
+                    From conversational AI and enterprise systems to full-stack web applications — the capabilities that power production-grade software for modern businesses.
                 </motion.p>
 
                 <div

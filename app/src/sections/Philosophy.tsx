@@ -5,20 +5,20 @@ import { useRef } from "react";
 
 const principles = [
     {
-        title: "Software must reflect business reality.",
-        description: "Code shouldn't exist in a vacuum. I build systems that account for physical workflows, operational hierarchy, and real-world friction."
+        title: "Build software that solves real business problems.",
+        description: "Code shouldn't exist in a vacuum. I focus on engineering solutions that improve workflows, generate revenue, and solve practical enterprise challenges rather than just writing complex code for its own sake."
     },
     {
-        title: "Systems must tolerate unreliable networks.",
-        description: "Connectivity is a luxury, not a guarantee. My systems are designed to be functional by default, using synchronization as an enhancement, not a requirement."
+        title: "Conversational interfaces unlock new user experiences.",
+        description: "Meeting users where they already are — on platforms like WhatsApp — often provides a better UX than forcing them to download another app. Conversational AI transforms how businesses interact with their customers."
     },
     {
-        title: "Architecture matters more than features.",
-        description: "Features can be added, but a broken foundation is expensive to fix. I prioritize scalability, data integrity, and clean separation of concerns."
+        title: "Clean APIs are the backbone of enterprise software.",
+        description: "Whether REST or GraphQL, well-designed APIs ensure frontend agility, seamless third-party integrations, and scalable mobile and web client consumption."
     },
     {
-        title: "Data ownership is critical for SMEs.",
-        description: "Small businesses shouldn't be held hostage by cloud providers. Local-first architecture ensures they own their data, regardless of their internet status."
+        title: "AI-assisted development accelerates delivery.",
+        description: "Leveraging tools like GitHub Copilot, Claude, and Cursor AI is no longer optional. These tools allow me to maintain high output velocity, automate boilerplate, and focus deeply on complex architectural challenges."
     }
 ];
 

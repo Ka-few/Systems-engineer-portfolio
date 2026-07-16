@@ -12,12 +12,12 @@ export default function Contact() {
             <div className="relative z-10 max-w-4xl mx-auto text-center">
                 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border border-emerald/20 text-emerald text-xs font-bold uppercase tracking-widest mb-8">
                     <span className="w-2 h-2 rounded-full bg-emerald animate-pulse"></span>
-                    System Status: Online
+                    Available For Hire
                 </div>
 
-                <h2 className="heading-lg mb-6">Let’s Build Practical Systems.</h2>
+                <h2 className="heading-lg mb-6">Let’s Build Something Extraordinary.</h2>
                 <p className="text-slate text-lg mb-12 max-w-2xl mx-auto">
-                    I’m always open to discussing offline-first architecture, SME infrastructure overhaul, or distributed system design. Whether you’re looking to scale or stabilize, let’s get in touch.
+                    I’m currently open to Senior Full Stack Software Engineer roles. Whether you’re building AI-powered applications, conversational platforms, or complex enterprise systems — let's connect.
                 </p>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-4">
@@ -75,11 +75,12 @@ export default function Contact() {
                     whileInView={{ opacity: 1 }}
                     className="mt-20 pt-10 border-t border-white/10 text-slate text-sm flex flex-col md:flex-row items-center justify-between gap-6"
                 >
-                    <div>© {new Date().getFullYear()} Francis Njoroge Wanjiru. Built for SMEs.</div>
+                    <div>© {new Date().getFullYear()} Francis Njoroge Wanjiru. Built with React & Next.js.</div>
                     <div className="flex gap-8">
                         <a href="#about" className="hover:text-accent transition-colors">About</a>
                         <a href="#expertise" className="hover:text-accent transition-colors">Expertise</a>
-                        <a href="#case-studies" className="hover:text-accent transition-colors">Work</a>
+                        <a href="#case-studies" className="hover:text-accent transition-colors">Projects</a>
+                        <a href="#experience" className="hover:text-accent transition-colors">Experience</a>
                         <a href="#architecture" className="hover:text-accent transition-colors">System Design</a>
                     </div>
                 </motion.div>
