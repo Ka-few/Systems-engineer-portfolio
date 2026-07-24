@@ -21,6 +21,7 @@ interface ProjectCardProps {
     techTags: TechTag[];
     githubUrl?: string;
     liveUrl?: string;
+    apiUrl?: string;
     isTeamProject?: boolean;
     index: number;
     isFlagship?: boolean;
@@ -75,7 +76,7 @@ function FlagshipBadge() {
 
 function ProjectCard({
     title, category, summary, problem, solution, highlights, challenges,
-    role, myRole, techTags, githubUrl, liveUrl, isTeamProject, index, isFlagship
+    role, myRole, techTags, githubUrl, liveUrl, apiUrl, isTeamProject, index, isFlagship
 }: ProjectCardProps) {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, margin: "-80px" });
@@ -200,6 +201,16 @@ function ProjectCard({
                             Live Demo <ExternalLink size={15} />
                         </a>
                     )}
+                    {apiUrl && (
+                        <a
+                            href={apiUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center gap-2 text-sm font-semibold text-slate-light hover:text-white transition-colors"
+                        >
+                            API <ExternalLink size={15} />
+                        </a>
+                    )}
                 </div>
             </div>
         </motion.div>
@@ -318,39 +329,43 @@ export default function CaseStudies() {
             githubUrl: "https://github.com/Ka-few/farm-mgt-app",
         },
         {
-            title: "Multi-Branch Retail & POS Management System",
-            category: "Enterprise · POS · Inventory · RBAC",
+            title: "PrimeGenetics — Bull Semen Catalog",
+            category: "AgriTech · Marketplace · RBAC",
             summary:
-                "A full-stack enterprise retail management system handling inventory, point-of-sale operations, customer credit, and role-based access across multiple branches — built with Node.js, React, and SQLite.",
+                "A role-based marketplace that helps dairy farmers discover bull semen, arrange veterinary artificial-insemination services, and source stock from agri-suppliers.",
             problem:
-                "A multi-branch retail business struggled with data fragmentation, inconsistent inventory tracking, and manual reconciliation across locations. There was no unified view of sales, credit accounts, or stock levels.",
+                "Dairy farmers need a straightforward way to compare genetics, find trusted veterinary AI services, and connect with suppliers—especially providers operating nearby. These workflows are often fragmented across separate channels.",
             solution:
-                "Built a comprehensive enterprise platform with a centralized backend API, branch-aware POS interface, inventory management module, and customer credit tracking. Role-based access control ensures each user sees only relevant data for their branch and role.",
+                "Built a role-aware marketplace with farmer ordering flows, vet verification and assignment workflows, supplier inventory management, and an admin catalog. Location-aware results help farmers select nearby vets and suppliers.",
             highlights: [
-                "Inventory management — real-time stock tracking, low-stock alerts, reorder workflows across branches",
-                "POS interface — fast checkout, product search, receipt generation, and daily sales reports",
-                "Customer credit system — credit limit management, payment tracking, and credit history",
-                "Role-based access control (RBAC) — Admin, Branch Manager, Cashier with distinct permissions",
-                "Enterprise workflows — shift management, daily reconciliation, and audit trails",
-                "Reporting dashboards — revenue by branch, top products, and credit exposure",
+                "Farmer experience — browse and filter bulls, manage a cart, place orders, and complete demo payments",
+                "Veterinary workflows — maintain profiles, complete admin verification, and view assigned orders",
+                "Agri-supplier portal — manage supplier profiles, bull listings, and inventory",
+                "Admin catalog controls — manage bull records and vet verification",
+                "Location-aware search — surfaces nearby vets and suppliers for farmers",
+                "Supabase-backed data layer — Auth, PostgreSQL, Row Level Security, and Storage",
             ],
             challenges: [
-                "Designed a RBAC system flexible enough to support branch-level and role-level permission combinations without query complexity explosion",
-                "Built optimistic POS UI interactions that remain responsive even under slow backend responses",
+                "Designed role-specific workflows while keeping application data scoped to the authenticated user through PostgreSQL Row Level Security",
+                "Connected the React client to an Express API with bearer-token authentication while keeping Supabase responsible for passwords and sessions",
             ],
             role: "My Role",
-            myRole: "Solo developer — system architecture, backend API design, React frontend, database schema, POS module, and RBAC implementation.",
+            myRole: "Full-stack development — React frontend, Express API, Supabase-backed data model, authentication flows, role-based experiences, and marketplace workflows.",
             techTags: [
-                { label: "Node.js" },
                 { label: "React" },
                 { label: "TypeScript" },
-                { label: "SQLite" },
+                { label: "Vite" },
+                { label: "Tailwind CSS" },
+                { label: "Node.js" },
                 { label: "Express" },
-                { label: "JWT Auth" },
+                { label: "Supabase" },
+                { label: "PostgreSQL" },
                 { label: "RBAC" },
-                { label: "REST APIs" },
+                { label: "React Leaflet" },
             ],
-            githubUrl: "https://github.com/Ka-few/Shop-management-system",
+            githubUrl: "https://github.com/Ka-few/Bull-Semen-Catalog",
+            liveUrl: "https://digital-bull-catalog-amber.vercel.app/",
+            apiUrl: "https://bull-catalog.onrender.com/",
         },
         {
             title: "Beauty Salon Management System",
