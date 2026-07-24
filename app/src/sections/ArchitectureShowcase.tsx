@@ -51,9 +51,9 @@ export default function ArchitectureShowcase() {
         <section id="architecture" className="section py-20 bg-navy/30">
             <div className="mb-16">
                 <div className="label mb-2">◈ Systems Integration</div>
-                <h2 className="heading-lg mb-4">Conversational AI Architecture</h2>
+                <h2 className="heading-lg mb-4">API & Integration Architecture</h2>
                 <p className="text-slate max-w-2xl">
-                    A look at how I integrate Twilio, WhatsApp, and LLMs into enterprise infrastructures — bridging natural language messaging with secure business APIs and automated workflows.
+                    A look at how I connect messaging platforms, third-party services, and data systems through secure business APIs, automated workflows, and reliable integration patterns.
                 </p>
             </div>
 
@@ -68,7 +68,7 @@ export default function ArchitectureShowcase() {
                     <div className="absolute inset-0 grid-texture opacity-30"></div>
 
                     <div className="relative z-10 w-[700px] lg:w-auto">
-                        <h3 className="heading-md mb-2">WhatsApp / Twilio Request Flow</h3>
+                        <h3 className="heading-md mb-2">Conversational Platform Request Flow</h3>
                         <p className="text-sm text-slate">Hover over components to explore the architecture</p>
                     </div>
 

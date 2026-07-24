@@ -138,7 +138,7 @@ export default function Hero() {
                         className="label"
                         style={{ marginBottom: "1rem" }}
                     >
-                        ◈ Full Stack Software Engineer
+                        ◈ Backend, API & Full Stack Engineer
                     </motion.div>
 
                     <motion.h1
@@ -163,7 +163,7 @@ export default function Hero() {
                             fontWeight: 700,
                         }}
                     >
-                        Full Stack Software Engineer
+                        Backend, API & Full Stack Software Engineer
                     </motion.p>
 
                     <motion.p
@@ -178,7 +178,7 @@ export default function Hero() {
                             maxWidth: "500px",
                         }}
                     >
-                        Building AI-powered applications, conversational platforms, enterprise business systems, and modern web experiences using React, TypeScript, Node.js, Python, GraphQL, REST APIs, and Twilio.
+                        Building secure backend services, APIs, integrations, and data-driven business platforms with Node.js, Python, PostgreSQL, React, and TypeScript — with a specialization in conversational and AI-powered systems.
                     </motion.p>
 
                     <motion.div
@@ -214,7 +214,7 @@ export default function Hero() {
                         transition={{ delay: 0.9 }}
                         style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap", marginTop: "2rem" }}
                     >
-                        {["React", "TypeScript", "Twilio", "GraphQL", "AI"].map((tag) => (
+                        {["Node.js", "REST APIs", "PostgreSQL", "System Integration", "Twilio"].map((tag) => (
                             <span
                                 key={tag}
                                 style={{
@@ -246,7 +246,7 @@ export default function Hero() {
                     }}
                 >
                     <div className="label" style={{ marginBottom: "1.5rem", textAlign: "center" }}>
-                        Conversational AI — Request Flow
+                        Conversational Platform — Request Flow
                     </div>
 
                     {/* Diagram */}

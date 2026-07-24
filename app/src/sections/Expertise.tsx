@@ -9,9 +9,9 @@ import {
 const expertise = [
     {
         icon: Layers,
-        title: "Full Stack Web Development",
+        title: "Backend, API & Full Stack Engineering",
         description:
-            "End-to-end delivery across the stack — React, Next.js, and TypeScript on the frontend paired with Node.js, Express, and Python (Flask/Django) on the backend. Reusable component libraries, Redux/Zustand state management, and scalable frontend architectures.",
+            "Secure backend services, REST and GraphQL APIs, data integrations, and end-to-end product delivery — with Node.js, Express, Python (Flask/Django), PostgreSQL, React, Next.js, and TypeScript.",
         color: "#38bdf8",
     },
     {
