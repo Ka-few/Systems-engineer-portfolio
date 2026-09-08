@@ -4,14 +4,35 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Briefcase, Calendar, ChevronRight } from "lucide-react";
 
-const achievements = [
-    "Provide technical support for ERP and full-stack business applications, investigating customer-reported issues across the UI, API, backend services, and database layers.",
-    "Troubleshoot API and integration failures by reproducing issues, inspecting request and response payloads, reviewing HTTP errors, and validating application logs to find the likely root cause.",
-    "Use SQL and relational databases to confirm whether errors originate in the frontend, API, backend logic, or underlying data, while following safe production-change practices.",
-    "Support Linux and container-based environments, using kubectl, pod descriptions, logs, and events to understand service health and isolate failures in Kubernetes workloads.",
-    "Document investigation steps, resolutions, and customer guidance clearly, while escalating complex issues with relevant evidence to engineering or QA teams.",
-    "Use Python, Bash, and JavaScript/TypeScript for diagnostics, automation, data processing, and operational improvements that reduce repetitive troubleshooting effort.",
-    "Work with GitHub/GitLab workflows, branching, pull requests, and CI/CD practices to support collaboration and deployment confidence in modern engineering environments."
+const roles = [
+    {
+        title: "IT Support & Business Systems Consultant",
+        company: "Kafew Digital Solutions",
+        location: "Nairobi",
+        period: "Jul 2024 - Present",
+        responsibilities: [
+            "Provide technical support for ERP and full-stack business applications, investigating customer-reported issues across the UI, API, backend services, and database layers.",
+            "Troubleshoot API and integration failures by reproducing issues, inspecting request and response payloads, analyzing HTTP errors and application logs, and tracing failures to likely root cause.",
+            "Develop and integrate RESTful APIs, working with endpoints, authentication, HTTP status codes, payloads, and backend data flows.",
+            "Use SQL and relational databases to validate records and determine whether issues originate in the frontend, API, backend logic, or underlying data.",
+            "Use Python, Bash, and JavaScript/TypeScript for scripting, application development, automation, diagnostics, and data-processing tasks.",
+            "Use GitHub and Git workflows for source-code management and collaboration, including branches, commits, pull requests, and CI/CD automation; familiar with GitLab workflows.",
+            "Work with containerized applications and Kubernetes concepts and tools, using kubectl for resource inspection, logs, events, and troubleshooting.",
+            "Communicate directly with customers, provide technical guidance, document investigations and resolutions, and escalate complex issues with relevant diagnostic evidence."
+        ]
+    },
+    {
+        title: "IT Support Officer",
+        company: "Datacomm Systems & Solutions",
+        location: "Nakuru",
+        period: "Nov 2016 - Apr 2024",
+        responsibilities: [
+            "Provided frontline technical support and troubleshooting for customers using business and inventory-management systems, investigating underlying causes rather than only symptoms.",
+            "Managed customer issues through diagnosis, resolution, follow-up, and documentation while maintaining customer trust and service continuity.",
+            "Supported implementation and adoption of business technology solutions, including user training and post-deployment technical support.",
+            "Translated business requirements into practical technical solutions and clear guidance for non-technical users."
+        ]
+    }
 ];
 
 export default function Experience() {
@@ -28,12 +49,14 @@ export default function Experience() {
                 </p>
             </div>
 
-            <div className="max-w-4xl mx-auto">
+            <div className="max-w-4xl mx-auto space-y-6">
+                {roles.map((role, roleIndex) => (
                 <motion.div
+                    key={role.company}
                     ref={ref}
                     initial={{ opacity: 0, y: 30 }}
                     animate={isInView ? { opacity: 1, y: 0 } : {}}
-                    transition={{ duration: 0.6 }}
+                    transition={{ duration: 0.6, delay: roleIndex * 0.15 }}
                     className="glass p-8 md:p-12 rounded-2xl relative overflow-hidden"
                 >
                     {/* Background Icon */}
@@ -44,18 +67,19 @@ export default function Experience() {
                     <div className="relative z-10">
                         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8 pb-8 border-b border-white/10">
                             <div>
-                                <h3 className="heading-md mb-2 text-white">Technical Support Engineer</h3>
-                                <div className="text-accent font-semibold tracking-wide">Business Systems & Application Support</div>
+                                <h3 className="heading-md mb-2 text-white">{role.title}</h3>
+                                <div className="text-accent font-semibold tracking-wide">{role.company}</div>
+                                <div className="text-slate text-sm mt-1">{role.location}</div>
                             </div>
                             <div className="flex items-center gap-2 text-slate text-sm font-medium bg-white/5 px-4 py-2 rounded-full w-fit">
                                 <Calendar size={16} className="text-slate-light" />
-                                7+ Years Experience
+                                {role.period}
                             </div>
                         </div>
 
                         <div className="space-y-4">
                             <h4 className="text-sm font-bold uppercase tracking-wider text-slate-light mb-4">Key Achievements & Responsibilities</h4>
-                            {achievements.map((achievement, i) => (
+                            {role.responsibilities.map((responsibility, i) => (
                                 <motion.div
                                     key={i}
                                     initial={{ opacity: 0, x: -20 }}
@@ -65,13 +89,14 @@ export default function Experience() {
                                 >
                                     <ChevronRight size={18} className="text-accent shrink-0 mt-0.5 group-hover:translate-x-1 transition-transform" />
                                     <p className="text-slate text-sm md:text-base leading-relaxed group-hover:text-slate-light transition-colors">
-                                        {achievement}
+                                        {responsibility}
                                     </p>
                                 </motion.div>
                             ))}
                         </div>
                     </div>
                 </motion.div>
+                ))}
             </div>
         </section>
     );
