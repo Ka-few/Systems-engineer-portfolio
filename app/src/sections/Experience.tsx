@@ -5,14 +5,13 @@ import { useRef } from "react";
 import { Briefcase, Calendar, ChevronRight } from "lucide-react";
 
 const achievements = [
-    "Designed and developed scalable full-stack applications using React, TypeScript, Express.js, Flask, and PostgreSQL.",
-    "Built reusable React component libraries and scalable frontend architectures using React, Redux, Zustand, and TypeScript.",
-    "Developed GraphQL and REST API integrations for frontend and backend communication.",
-    "Engineered conversational AI solutions using Twilio WhatsApp APIs.",
-    "Developed secure integrations using GraphQL, REST APIs and webhooks.",
-    "Integrated AI-powered capabilities into business applications.",
-    "Leveraged GitHub Copilot, Claude, Cursor AI and ChatGPT to accelerate development.",
-    "Collaborated across the complete software development lifecycle."
+    "Provide technical support for ERP and full-stack business applications, investigating customer-reported issues across the UI, API, backend services, and database layers.",
+    "Troubleshoot API and integration failures by reproducing issues, inspecting request and response payloads, reviewing HTTP errors, and validating application logs to find the likely root cause.",
+    "Use SQL and relational databases to confirm whether errors originate in the frontend, API, backend logic, or underlying data, while following safe production-change practices.",
+    "Support Linux and container-based environments, using kubectl, pod descriptions, logs, and events to understand service health and isolate failures in Kubernetes workloads.",
+    "Document investigation steps, resolutions, and customer guidance clearly, while escalating complex issues with relevant evidence to engineering or QA teams.",
+    "Use Python, Bash, and JavaScript/TypeScript for diagnostics, automation, data processing, and operational improvements that reduce repetitive troubleshooting effort.",
+    "Work with GitHub/GitLab workflows, branching, pull requests, and CI/CD practices to support collaboration and deployment confidence in modern engineering environments."
 ];
 
 export default function Experience() {
@@ -22,10 +21,10 @@ export default function Experience() {
     return (
         <section id="experience" className="section py-20">
             <div className="mb-14">
-                <div className="label mb-2">◈ Professional Journey</div>
-                <h2 className="heading-lg mb-4">Experience</h2>
+                <div className="label mb-2">◈ Experience</div>
+                <h2 className="heading-lg mb-4">Operational Experience</h2>
                 <p className="text-slate max-w-2xl">
-                    A track record of delivering scalable software solutions, integrating AI capabilities, and building robust enterprise systems.
+                    A practical track record in technical support, incident troubleshooting, API diagnostics, and production reliability across business-critical systems.
                 </p>
             </div>
 
@@ -45,12 +44,12 @@ export default function Experience() {
                     <div className="relative z-10">
                         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8 pb-8 border-b border-white/10">
                             <div>
-                                <h3 className="heading-md mb-2 text-white">Full Stack Software Engineer</h3>
-                                <div className="text-accent font-semibold tracking-wide">Freelance & Contract</div>
+                                <h3 className="heading-md mb-2 text-white">Technical Support Engineer</h3>
+                                <div className="text-accent font-semibold tracking-wide">Business Systems & Application Support</div>
                             </div>
                             <div className="flex items-center gap-2 text-slate text-sm font-medium bg-white/5 px-4 py-2 rounded-full w-fit">
                                 <Calendar size={16} className="text-slate-light" />
-                                4+ Years Experience
+                                7+ Years Experience
                             </div>
                         </div>
 

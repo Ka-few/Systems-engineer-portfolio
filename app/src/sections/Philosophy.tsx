@@ -5,20 +5,20 @@ import { useRef } from "react";
 
 const principles = [
     {
-        title: "Build software that solves real business problems.",
-        description: "Code shouldn't exist in a vacuum. I focus on engineering solutions that improve workflows, generate revenue, and solve practical enterprise challenges rather than just writing complex code for its own sake."
+        title: "Uptime starts with clear diagnosis.",
+        description: "Incidents are rarely solved by guesswork. I focus on reproducing issues, reviewing logs and request flow, and establishing the evidence needed to isolate the real problem before making changes."
     },
     {
-        title: "Conversational interfaces unlock new user experiences.",
-        description: "Meeting users where they already are — on platforms like WhatsApp — often provides a better UX than forcing them to download another app. Conversational AI transforms how businesses interact with their customers."
+        title: "User trust depends on service reliability.",
+        description: "Whether a system is a business app, API, or internal workflow, users judge its quality by how reliably it works. Strong support and operational discipline build that trust over time."
     },
     {
-        title: "Clean APIs are the backbone of enterprise software.",
-        description: "Whether REST or GraphQL, well-designed APIs ensure frontend agility, seamless third-party integrations, and scalable mobile and web client consumption."
+        title: "Well-instrumented systems are easier to support.",
+        description: "Healthy services depend on good logging, structured monitoring, clean API behavior, and clear operational ownership. The stronger the observability, the faster the response."
     },
     {
-        title: "AI-assisted development accelerates delivery.",
-        description: "Leveraging tools like GitHub Copilot, Claude, and Cursor AI is no longer optional. These tools allow me to maintain high output velocity, automate boilerplate, and focus deeply on complex architectural challenges."
+        title: "Automation reduces repeat incidents.",
+        description: "From scripts for diagnostics to automation that reduces manual troubleshooting, I value the operational improvements that turn firefighting into sustainable service health."
     }
 ];
 
@@ -30,8 +30,8 @@ export default function Philosophy() {
         <section id="philosophy" className="section py-24 border-y border-white/5 bg-navy-dark">
             <div className="max-w-4xl mx-auto">
                 <div className="text-center mb-16">
-                    <div className="label mb-4">◈ Principles</div>
-                    <h2 className="heading-lg mb-6">Engineering Philosophy</h2>
+                    <div className="label mb-4">◈ Reliability Principles</div>
+                    <h2 className="heading-lg mb-6">How I Think About Stability</h2>
                 </div>
 
                 <div className="space-y-12">

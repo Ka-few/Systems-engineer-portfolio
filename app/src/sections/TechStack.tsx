@@ -51,50 +51,50 @@ function StackCategory({ title, icon: Icon, items, index, accentColor = "var(--a
 export default function TechStack() {
     const categories = [
         {
-            title: "Frontend",
+            title: "Operating Systems",
             icon: Layout,
             accentColor: "#38bdf8",
-            items: ["React", "Next.js", "TypeScript", "JavaScript", "Redux", "Zustand", "HTML5", "CSS3", "Material UI", "Bootstrap", "Framer Motion"],
+            items: ["Linux", "Windows", "Networking Fundamentals", "System Logs", "Service Health"],
         },
         {
-            title: "Backend",
+            title: "Scripting & Automation",
             icon: Server,
             accentColor: "#f59e0b",
-            items: ["Node.js", "Express", "Python (Flask)", "Django", "GraphQL", "REST APIs", "JWT Authentication", "RBAC", "Webhooks"],
+            items: ["Python", "Bash", "JavaScript", "TypeScript", "Automation Scripts", "Log Analysis"],
         },
         {
-            title: "Databases",
+            title: "Databases & Data Validation",
             icon: Database,
             accentColor: "#f472b6",
-            items: ["PostgreSQL", "MySQL", "SQLite", "MongoDB"],
+            items: ["SQL", "Oracle Database", "PostgreSQL", "MySQL", "Data Validation", "Safe Change Awareness"],
         },
         {
-            title: "Conversational AI",
+            title: "APIs & Integrations",
             icon: MessageSquare,
             accentColor: "#25d366",
-            items: ["Twilio", "WhatsApp Business API", "LLM Integration", "Prompt Engineering", "AI Assistants", "OpenAI API", "Conversational AI"],
+            items: ["REST APIs", "HTTP Status Codes", "Authentication", "Payload Inspection", "Postman", "Insomnia"],
         },
         {
-            title: "DevOps",
+            title: "Kubernetes & Containers",
             icon: Container,
             accentColor: "#818cf8",
-            items: ["Docker", "Git", "GitHub Actions", "Linux", "CI/CD", "Nginx", "Vercel", "Railway"],
+            items: ["Docker", "Kubernetes", "kubectl", "Pods", "Deployments", "Services", "Namespaces", "Events"],
         },
         {
-            title: "AI Productivity",
+            title: "DevOps & Collaboration",
             icon: Sparkles,
             accentColor: "#fb923c",
-            items: ["GitHub Copilot", "Claude", "Cursor AI", "ChatGPT"],
+            items: ["Git", "GitHub", "GitLab", "CI/CD", "GitHub Actions", "Pull Requests", "Documentation"],
         },
     ];
 
     return (
         <section id="stack" className="section py-20">
             <div className="mb-12">
-                <div className="label mb-2">◈ Tech Stack</div>
-                <h2 className="heading-lg mb-4">Development Toolkit</h2>
+                <div className="label mb-2">◈ Toolkit</div>
+                <h2 className="heading-lg mb-4">Operations & Troubleshooting Toolkit</h2>
                 <p className="text-slate max-w-2xl">
-                    A comprehensive, modern toolkit for building scalable full-stack applications, conversational AI platforms, and enterprise business systems.
+                    A practical stack for incident diagnosis, service support, automation, and reliability work across modern application environments.
                 </p>
             </div>
 

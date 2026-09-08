@@ -50,10 +50,10 @@ export default function ArchitectureShowcase() {
     return (
         <section id="architecture" className="section py-20 bg-navy/30">
             <div className="mb-16">
-                <div className="label mb-2">◈ Systems Integration</div>
-                <h2 className="heading-lg mb-4">API & Integration Architecture</h2>
+                <div className="label mb-2">◈ Service Health</div>
+                <h2 className="heading-lg mb-4">Monitoring & Request Flow</h2>
                 <p className="text-slate max-w-2xl">
-                    A look at how I connect messaging platforms, third-party services, and data systems through secure business APIs, automated workflows, and reliable integration patterns.
+                    A view of how service requests, integrations, and operational signals move through critical systems — with a focus on reliability, observability, and recovery paths.
                 </p>
             </div>
 

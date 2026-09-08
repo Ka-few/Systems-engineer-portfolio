@@ -84,9 +84,9 @@ function FlowNode({ label, sublabel, icon: Icon, color, index }: FlowNodeProps) 
 
 export default function Hero() {
     const inputs = [
-        { label: "WhatsApp User", sublabel: "Incoming Message", icon: MessageSquare, color: "#25d366" },
-        { label: "Twilio Gateway", sublabel: "Webhook Trigger", icon: Zap, color: "#f59e0b" },
-        { label: "REST / GraphQL", sublabel: "API Request", icon: Globe, color: "#38bdf8" },
+        { label: "Customer Report", sublabel: "Incident Intake", icon: MessageSquare, color: "#25d366" },
+        { label: "API / Service", sublabel: "Root Cause Check", icon: Globe, color: "#38bdf8" },
+        { label: "Kubernetes", sublabel: "Pods / Logs / Events", icon: Zap, color: "#f59e0b" },
     ];
 
     return (
@@ -138,7 +138,7 @@ export default function Hero() {
                         className="label"
                         style={{ marginBottom: "1rem" }}
                     >
-                        ◈ Backend, API & Full Stack Engineer
+                        ◈ Aspiring Site Reliability Engineer
                     </motion.div>
 
                     <motion.h1
@@ -148,7 +148,7 @@ export default function Hero() {
                         className="heading-xl"
                         style={{ marginBottom: "0.75rem" }}
                     >
-                        I'm <span className="text-gradient-accent">Francis Njoroge Wanjiru.</span>
+                        I&apos;m <span className="text-gradient-accent">Francis Njoroge Wanjiru.</span>
                     </motion.h1>
 
                     <motion.p
@@ -163,7 +163,7 @@ export default function Hero() {
                             fontWeight: 700,
                         }}
                     >
-                        Backend, API & Full Stack Software Engineer
+                        Site Reliability | Incident Response | System Health
                     </motion.p>
 
                     <motion.p
@@ -175,10 +175,10 @@ export default function Hero() {
                             color: "var(--slate)",
                             lineHeight: 1.85,
                             marginBottom: "2.5rem",
-                            maxWidth: "500px",
+                            maxWidth: "520px",
                         }}
                     >
-                        Building secure backend services, APIs, integrations, and data-driven business platforms with Node.js, Python, PostgreSQL, React, and TypeScript — with a specialization in conversational and AI-powered systems.
+                        Aspiring SRE with 7+ years in technical support and incident investigation, focused on API debugging, Linux systems, Kubernetes, SQL validation, and building reliable service operations.
                     </motion.p>
 
                     <motion.div
@@ -214,7 +214,7 @@ export default function Hero() {
                         transition={{ delay: 0.9 }}
                         style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap", marginTop: "2rem" }}
                     >
-                        {["Node.js", "REST APIs", "PostgreSQL", "System Integration", "Twilio"].map((tag) => (
+                        {["Linux", "Kubernetes", "Python", "Incident Response", "SQL", "Observability"].map((tag) => (
                             <span
                                 key={tag}
                                 style={{
@@ -246,7 +246,7 @@ export default function Hero() {
                     }}
                 >
                     <div className="label" style={{ marginBottom: "1.5rem", textAlign: "center" }}>
-                        Conversational Platform — Request Flow
+                        Service Reliability Flow
                     </div>
 
                     {/* Diagram */}
@@ -296,14 +296,14 @@ export default function Hero() {
                         >
                             <Brain size={30} color="#f59e0b" />
                             <span style={{ fontSize: "0.72rem", color: "#f59e0b", fontWeight: 700, textAlign: "center" }}>
-                                AI Engine
+                                Monitoring
                             </span>
                             <div style={{ display: "flex", alignItems: "center", gap: "0.3rem" }}>
                                 <div
                                     className="pulse-glow"
                                     style={{ width: "6px", height: "6px", borderRadius: "50%", background: "#f59e0b" }}
                                 />
-                                <span style={{ fontSize: "0.6rem", color: "#f59e0b" }}>LLM Active</span>
+                                <span style={{ fontSize: "0.6rem", color: "#f59e0b" }}>Alerting</span>
                             </div>
                         </motion.div>
                     </div>
@@ -321,7 +321,7 @@ export default function Hero() {
                             flexWrap: "wrap",
                         }}
                     >
-                        {["Twilio API", "OpenAI", "Node.js", "GraphQL"].map((tag) => (
+                        {["Incident Intake", "Logs & Metrics", "Kubernetes", "API Checks"].map((tag) => (
                             <span
                                 key={tag}
                                 style={{

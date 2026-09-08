@@ -9,44 +9,44 @@ import {
 const expertise = [
     {
         icon: Layers,
-        title: "Backend, API & Full Stack Engineering",
+        title: "Incident Investigation & Root Cause Analysis",
         description:
-            "Secure backend services, REST and GraphQL APIs, data integrations, and end-to-end product delivery — with Node.js, Express, Python (Flask/Django), PostgreSQL, React, Next.js, and TypeScript.",
+            "Reproducing faults, reviewing logs and events, and tracing failures through UI, API, service, and data layers to isolate the true source of incidents before escalation or remediation.",
         color: "#38bdf8",
     },
     {
         icon: MessageSquare,
-        title: "Conversational AI & Twilio",
+        title: "Technical Support & Customer Resolution",
         description:
-            "Building intelligent messaging platforms using Twilio WhatsApp Business API, webhook-driven chatbots, AI assistants with LLM integration, appointment booking systems, and automated customer engagement pipelines.",
+            "Working directly with users to understand issues, explain technical findings clearly, manage expectations, and maintain ownership through resolution across business-critical platforms.",
         color: "#25d366",
     },
     {
         icon: Globe,
-        title: "GraphQL & REST API Design",
+        title: "API & Backend Diagnostics",
         description:
-            "Designing clean, versioned REST and GraphQL APIs — schema-first development, efficient resolvers, data loaders, JWT authentication, webhook integrations, and third-party service connections for enterprise-grade systems.",
+            "Inspecting request and response payloads, reviewing HTTP status codes, tracing integration failures, and validating service behavior across backend systems and external dependencies.",
         color: "#f472b6",
     },
     {
         icon: Brain,
-        title: "AI-Powered Application Development",
+        title: "Linux & System Troubleshooting",
         description:
-            "Integrating AI into real products — OpenAI API, LLM orchestration, prompt engineering, RAG pipelines, AI assistants, and natural-language querying. Using GitHub Copilot, Claude, and Cursor AI to accelerate development velocity.",
+            "Diagnosing application and platform issues in Linux environments, validating system health, assessing logs, and understanding operational behavior under production conditions.",
         color: "#fb923c",
     },
     {
         icon: ShieldCheck,
-        title: "Enterprise Business Systems",
+        title: "Kubernetes & Container Operations",
         description:
-            "Building multi-user enterprise platforms with granular RBAC, JWT/session authentication, multi-tenant architecture, audit trails, POS systems, CRM workflows, financial dashboards, and business reporting modules.",
+            "Using kubectl to inspect pods, deployments, services, namespaces, and events; checking logs and resource health to support debugging and service recovery in containerized systems.",
         color: "#10b981",
     },
     {
         icon: Rocket,
-        title: "DevOps & Modern Deployment",
+        title: "Automation, SQL & GitOps Readiness",
         description:
-            "Shipping to production on Vercel, Railway, and VPS environments using Docker, GitHub Actions CI/CD, Linux administration, Nginx configuration, and environment management for reliable, scalable delivery.",
+            "Leveraging Python, Bash, JavaScript, SQL, GitHub/GitLab workflows, and CI/CD awareness to automate routine diagnostics, validate data integrity, and improve service reliability practices.",
         color: "#fbbf24",
     },
 ];
@@ -73,7 +73,7 @@ export default function Expertise() {
                     className="label"
                     style={{ marginBottom: "0.75rem" }}
                 >
-                    ◈ Core Expertise
+                    ◈ Reliability Focus
                 </motion.div>
 
                 <motion.h2
@@ -83,7 +83,7 @@ export default function Expertise() {
                     className="heading-lg"
                     style={{ marginBottom: "0.75rem" }}
                 >
-                    Engineering Capabilities
+                    Reliability & Operations Capabilities
                 </motion.h2>
 
                 <motion.p
@@ -98,7 +98,7 @@ export default function Expertise() {
                         lineHeight: 1.7,
                     }}
                 >
-                    From conversational AI and enterprise systems to full-stack web applications — the capabilities that power production-grade software for modern businesses.
+                    My focus sits at the intersection of support, automation, and systems reliability — helping businesses diagnose issues, reduce downtime, and keep critical services stable.
                 </motion.p>
 
                 <div

@@ -15,9 +15,9 @@ export default function Contact() {
                     Available For Hire
                 </div>
 
-                <h2 className="heading-lg mb-6">Let’s Build Something Extraordinary.</h2>
+                <h2 className="heading-lg mb-6">Let’s Improve Service Reliability Together.</h2>
                 <p className="text-slate text-lg mb-12 max-w-2xl mx-auto">
-                    I’m currently open to Senior Full Stack Software Engineer roles. Whether you’re building AI-powered applications, conversational platforms, or complex enterprise systems — let's connect.
+                    I’m currently open to opportunities in Technical Support, SRE, DevOps, Platform Operations, and Site Reliability-focused roles. Whether you need someone to troubleshoot production issues, strengthen operational workflows, or improve platform resilience — let’s connect.
                 </p>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-4">

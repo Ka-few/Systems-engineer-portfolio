@@ -90,8 +90,8 @@ function ProjectCard({
             className="glass mb-16 overflow-hidden rounded-2xl"
             style={
                 isFlagship
-                    ? { boxShadow: "0 0 0 1px rgba(245,158,11,0.25), 0 8px 40px rgba(245,158,11,0.08)" }
-                    : {}
+                    ? { boxShadow: "0 0 0 1px rgba(245,158,11,0.18), 0 6px 24px rgba(15,23,42,0.2)" }
+                    : { boxShadow: "0 0 0 1px rgba(255,255,255,0.04)" }
             }
         >
             {/* Header */}
@@ -115,36 +115,22 @@ function ProjectCard({
 
             {/* Content grid */}
             <div className="grid grid-cols-1 lg:grid-cols-2">
-                {/* Left */}
                 <div className="p-8 lg:p-10 border-b lg:border-b-0 lg:border-r border-white/10">
-                    <div className="space-y-6">
+                    <div className="space-y-5">
                         <div>
-                            <h4 className="text-accent font-bold text-sm uppercase tracking-wider mb-2">The Problem</h4>
+                            <h4 className="text-accent font-bold text-sm uppercase tracking-wider mb-2">Problem</h4>
                             <p className="text-slate leading-relaxed text-sm">{problem}</p>
                         </div>
 
                         <div>
-                            <h4 style={{ color: "#10b981" }} className="font-bold text-sm uppercase tracking-wider mb-2">The Solution</h4>
+                            <h4 style={{ color: "#10b981" }} className="font-bold text-sm uppercase tracking-wider mb-2">Approach</h4>
                             <p className="text-slate leading-relaxed text-sm">{solution}</p>
-                        </div>
-
-                        <div>
-                            <h4 className="text-white font-bold text-sm uppercase tracking-wider mb-2">Challenges Solved</h4>
-                            <ul className="space-y-2">
-                                {challenges.map((c, i) => (
-                                    <li key={i} className="flex items-start gap-2 text-slate text-xs leading-relaxed">
-                                        <span style={{ color: "var(--accent)", marginTop: "1px", flexShrink: 0 }}>→</span>
-                                        {c}
-                                    </li>
-                                ))}
-                            </ul>
                         </div>
                     </div>
                 </div>
 
-                {/* Right */}
-                <div className="p-8 lg:p-10 bg-navy-dark/40">
-                    <h4 className="text-white font-bold text-sm uppercase tracking-wider mb-5">Technical Highlights</h4>
+                <div className="p-8 lg:p-10 bg-navy-dark/30">
+                    <h4 className="text-white font-bold text-xs uppercase tracking-wider mb-4">Operational Highlights</h4>
                     <ul className="space-y-3 mb-8">
                         {highlights.map((h, i) => (
                             <li key={i} className="flex items-start gap-3">
@@ -156,13 +142,13 @@ function ProjectCard({
 
                     <div
                         style={{
-                            padding: "1rem",
+                            padding: "0.9rem 1rem",
                             background: "rgba(255,255,255,0.02)",
                             border: "1px solid rgba(255,255,255,0.06)",
                             borderRadius: "8px",
                         }}
                     >
-                        <h4 className="text-white font-bold text-xs uppercase tracking-wider mb-1">{role}</h4>
+                        <h4 className="text-white font-bold text-[11px] uppercase tracking-wider mb-1">{role}</h4>
                         <p className="text-slate text-xs leading-relaxed">{myRole}</p>
                     </div>
                 </div>
@@ -220,176 +206,176 @@ function ProjectCard({
 export default function CaseStudies() {
     const projects: Omit<ProjectCardProps, "index">[] = [
         {
-            title: "WhatsApp CRM for Beauty Salon",
-            category: "Conversational AI · CRM · SaaS",
+            title: "WhatsApp Workflow Reliability & CRM Automation",
+            category: "Operations · Messaging · Support Automation",
             isFlagship: true,
             summary:
-                "A WhatsApp-native CRM platform built for a beauty salon that automates appointment booking, customer follow-ups, and business reporting entirely through WhatsApp — powered by Twilio, Node.js, and GraphQL.",
+                "A customer-facing WhatsApp workflow designed to reduce manual support overhead, prevent appointment errors, and provide a more reliable service experience for a beauty business.",
             problem:
-                "The salon managed appointments via manual WhatsApp messages, leading to double-bookings, missed follow-ups, and zero visibility into revenue or customer retention. Staff spent hours each day on repetitive messaging.",
+                "Booking and customer follow-up were handled manually through chat messages, creating missed reminders, double bookings, and inconsistent records. The operational pain was not just user experience — it was service reliability and business continuity.",
             solution:
-                "Built a full-stack SaaS CRM where customers interact through WhatsApp naturally — booking, rescheduling, and receiving reminders automatically. The admin dashboard provides real-time CRM analytics, customer history, and revenue reporting via a GraphQL API.",
+                "Built a support-friendly automation layer where customers can book, reschedule, and receive reminders through WhatsApp. The system adds webhook validation, event-driven processing, and admin visibility to improve consistency, traceability, and service recovery.",
             highlights: [
-                "Twilio WhatsApp Business API with webhook-driven message routing and session management",
-                "Conversational booking flow — AI-assisted appointment scheduling through WhatsApp chat",
-                "GraphQL API for flexible frontend queries with PostgreSQL persistence",
-                "Real-time CRM dashboard — customer profiles, appointment calendar, revenue analytics",
-                "Automated follow-up sequences and appointment reminder notifications",
-                "Multi-staff management with role-based access and booking assignments",
-                "SaaS-ready multi-tenant architecture for scaling to multiple salons",
+                "Twilio webhook processing with retry-safe orchestration and message state handling",
+                "Operational booking workflow to reduce manual coordination and scheduling failures",
+                "Data-backed reporting for revenue, service trends, and customer engagement",
+                "GraphQL/API layer enabling consistent front-end and backend behavior",
+                "Customer communication flow designed for repeatable business support rather than ad hoc handling",
+                "Role-aware admin visibility for staff workflows and business tracking",
             ],
             challenges: [
-                "Designed a stateful conversation engine that handles multi-step booking flows within WhatsApp's stateless message model",
-                "Built idempotent webhook processing to handle Twilio's at-least-once delivery guarantees",
-                "Architected a GraphQL schema that efficiently serves both the admin dashboard and the WhatsApp bot backend",
+                "Modeled a conversational workflow that remained reliable even with WhatsApp’s stateless message model and repeated inbound events",
+                "Built idempotent webhook handling to prevent duplicate processing during retries and service interruptions",
+                "Created a predictable operational model so staff could support bookings without manual reconciliation",
             ],
-            role: "My Role",
-            myRole: "Solo developer — full stack design and implementation, from Twilio webhook integration and GraphQL API design to React dashboard and PostgreSQL schema.",
+            role: "System Support & Operations Perspective",
+            myRole: "Designed the reliability layer behind a WhatsApp-driven service flow — covering message handling, API consistency, business workflows, and operational traceability for real customers.",
             techTags: [
                 { label: "Twilio" },
+                { label: "Webhook Reliability" },
                 { label: "WhatsApp Business API" },
                 { label: "Node.js" },
                 { label: "GraphQL" },
-                { label: "React" },
-                { label: "TypeScript" },
                 { label: "PostgreSQL" },
-                { label: "Express" },
-                { label: "JWT Auth" },
+                { label: "API Diagnostics" },
+                { label: "Support Automation" },
             ],
             githubUrl: "https://github.com/Ka-few/whatsapp-business-os",
         },
         {
-            title: "SheCare — Women's Self-Care AI Assistant",
-            category: "Conversational AI · Healthcare · WhatsApp",
+            title: "SheCare — Safe AI Support Workflow",
+            category: "AI Operations · Health Support · Reliability",
             isTeamProject: true,
             summary:
-                "A WhatsApp-based AI health assistant for women, providing AI-assisted healthcare guidance, prescription interpretation, and geolocation-based clinic discovery — built as part of a collaborative team project.",
+                "A WhatsApp-based assistive health platform designed to improve access to health information while keeping responses safe, consistent, and understandable for users.",
             problem:
-                "Women in underserved communities lacked affordable, immediate access to healthcare guidance. Clinic visits for minor concerns were costly and time-consuming, and health literacy around prescriptions was low.",
+                "Users needed quick access to health-related guidance, but context, trust, and safety risks made unstructured AI responses a challenge. The support workflow had to balance accessibility with strong safety guardrails.",
             solution:
-                "A WhatsApp chatbot powered by LLM integration that provides symptom-based health guidance, interprets prescriptions in plain language, and surfaces nearby clinics on a map — all within a familiar messaging interface.",
+                "Built an AI-assisted messaging experience with prompt guardrails, clear conversational routing, and structured interpretation of health information. The system supports follow-up questions while reducing the risk of inaccurate or unsafe guidance.",
             highlights: [
-                "WhatsApp chatbot built on Twilio with LLM-powered conversational health guidance",
-                "Prescription interpretation feature — decodes medical prescriptions into plain language",
-                "Geolocation-based clinic finder surfacing nearby healthcare facilities",
-                "LLM integration with prompt engineering for safe, context-aware health responses",
-                "Conversation history and session management for multi-turn interactions",
-                "Designed for low-bandwidth environments with text-first interactions",
+                "Twilio-based messaging flow for safe, text-first support interactions",
+                "Prompt design tuned for reliability, clarity, and risk mitigation",
+                "Prescription interpretation in plain language to reduce confusion and support better user understanding",
+                "Geolocation support for clinic discovery and service routing",
+                "Structured conversation flow that reduces unsafe or unsupported health recommendations",
+                "Support-focused UX for users in low-bandwidth environments",
             ],
             challenges: [
-                "Implemented safe guardrails and prompt engineering patterns to prevent medical misinformation from the LLM",
-                "Designed a geolocation query flow that works within WhatsApp's text-only interface without requiring a native app",
+                "Implemented guardrails to reduce medical misinformation and reinforce safe AI behavior",
+                "Designed a conversational model that remained helpful without requiring a complex mobile app experience",
+                "Structured the flow so that support teams could understand how decisions were made and where escalation was needed",
             ],
-            role: "My Contributions",
+            role: "Reliability & AI Support Contribution",
             myRole:
-                "Contributed to the Twilio WhatsApp integration layer, webhook routing architecture, and LLM prompt engineering. Collaborated with the team on system design and API contracts.",
+                "Contributed to the message orchestration, API workflow design, and prompt-safety layer, helping ensure the assistant behaved predictably while supporting users in real-world health scenarios.",
             techTags: [
                 { label: "Twilio" },
                 { label: "WhatsApp API" },
-                { label: "LLM Integration" },
+                { label: "LLM Safety" },
                 { label: "Prompt Engineering" },
+                { label: "Support Workflows" },
                 { label: "Node.js" },
                 { label: "Conversational AI" },
-                { label: "Geolocation API" },
             ],
         },
         {
-            title: "ShambaSmart Farm Management",
-            category: "Agricultural FinTech · Desktop · Offline-First",
+            title: "ShambaSmart Farm Operations & Offline Resilience",
+            category: "Operational Tech · Reliability · Offline Systems",
             summary:
-                "An offline-first, desktop-native farm management system built with React, TypeScript, and Tauri — featuring financial dashboards, analytics, business reporting, and an integrated AI assistant for data-driven farm decisions.",
+                "A desktop-first farm operations platform built to function reliably in low-connectivity environments while supporting business record-keeping, financial visibility, and operational decisions.",
             problem:
-                "Farmers relied on fragmented tools and manual records, resulting in poor visibility into farm financials and operations. Most digital solutions required constant internet access — unusable in rural environments.",
+                "Farm operations were fragmented across manual records and inconsistent digital workflows. In many regions, internet access is unreliable, which creates a real service and data integrity risk when systems depend on constant connectivity.",
             solution:
-                "A Tauri-powered desktop application with SQLite for fully offline data persistence. An integrated AI assistant powered by Ollama enables natural-language querying of farm data without internet dependency. Interactive dashboards and PDF reporting provide business intelligence.",
+                "Built an offline-first platform with a resilient local data layer and a desktop client that still supports reporting, AI-assisted queries, and operational visibility. The project emphasizes continuity under poor connectivity and clean local data handling.",
             highlights: [
-                "Offline-first architecture with SQLite for reliable local data persistence — no internet required",
-                "Rust-powered Tauri backend for secure, high-performance native execution",
-                "Integrated AI assistant with database tool-calling via Tauri IPC channels",
-                "Financial dashboards with interactive Recharts visualizations — revenue, expenses, crop analytics",
-                "Dynamic PDF reporting system using jsPDF and AutoTable for business reporting",
-                "React + TypeScript frontend with clean component architecture",
+                "Offline-first architecture with SQLite for dependable local persistence",
+                "Resilient desktop app design for low-connectivity agricultural environments",
+                "AI-assisted natural-language queries over local operational data",
+                "Reporting and analytical workflows for expenses, revenue, and farm productivity",
+                "Local data processing to reduce service outages caused by connectivity drops",
+                "Support-minded design for continuous operation without cloud dependency",
             ],
             challenges: [
-                "Bridged Rust (Tauri) and JavaScript (React) for secure IPC communication with the local SQLite database",
-                "Implemented AI tool-calling that executes database queries through the Tauri command system without internet access",
+                "Bridged native desktop execution and local data access without creating reliability gaps under limited connectivity",
+                "Built AI data-query flows that could operate without internet dependence and still provide usable results",
+                "Maintained consistent reporting while working with local-first data integrity requirements",
             ],
-            role: "My Role",
-            myRole: "Solo developer — full system design, Tauri/Rust backend, React/TypeScript frontend, SQLite schema, AI assistant integration, and reporting module.",
+            role: "Reliability & Systems Design",
+            myRole: "Designed the system around resilience, local persistence, and dependable user workflows — from desktop data handling to offline business intelligence and AI-assisted reporting.",
             techTags: [
-                { label: "React" },
-                { label: "TypeScript" },
-                { label: "Tauri" },
+                { label: "Offline-First" },
                 { label: "SQLite" },
+                { label: "Tauri" },
+                { label: "TypeScript" },
+                { label: "React" },
                 { label: "Rust" },
-                { label: "Ollama AI" },
-                { label: "Recharts" },
-                { label: "jsPDF" },
+                { label: "Operational Analytics" },
+                { label: "AI Tooling" },
             ],
             githubUrl: "https://github.com/Ka-few/farm-mgt-app",
         },
         {
-            title: "PrimeGenetics — Bull Semen Catalog",
-            category: "AgriTech · Marketplace · RBAC",
+            title: "PrimeGenetics — Service Workflow & Access Control",
+            category: "Support Systems · RBAC · Marketplace Operations",
             summary:
-                "A role-based marketplace that helps dairy farmers discover bull semen, arrange veterinary artificial-insemination services, and source stock from agri-suppliers.",
+                "A role-based marketplace and operational workflow supporting farmers, vets, and suppliers with clear access boundaries and service-specific actions.",
             problem:
-                "Dairy farmers need a straightforward way to compare genetics, find trusted veterinary AI services, and connect with suppliers—especially providers operating nearby. These workflows are often fragmented across separate channels.",
+                "Users in different roles needed access to different parts of the system, but business workflows were fragmented and the data experience was inconsistent across farmer, vet, and supplier processes.",
             solution:
-                "Built a role-aware marketplace with farmer ordering flows, vet verification and assignment workflows, supplier inventory management, and an admin catalog. Location-aware results help farmers select nearby vets and suppliers.",
+                "Built a permission-aware service experience with role-based flows, inventory management, verification steps, and operational tracking. The project models how service access and business workflows can be controlled cleanly across stakeholders.",
             highlights: [
-                "Farmer experience — browse and filter bulls, manage a cart, place orders, and complete demo payments",
-                "Veterinary workflows — maintain profiles, complete admin verification, and view assigned orders",
-                "Agri-supplier portal — manage supplier profiles, bull listings, and inventory",
-                "Admin catalog controls — manage bull records and vet verification",
-                "Location-aware search — surfaces nearby vets and suppliers for farmers",
-                "Supabase-backed data layer — Auth, PostgreSQL, Row Level Security, and Storage",
+                "Role-based access design with clear separation between farmer, vet, and supplier workflows",
+                "Operational service flow for ordering, verification, and assignment tasks",
+                "Inventory and catalog management with structured permissions",
+                "Admin controls for business oversight and record integrity",
+                "Location-aware service discovery to reduce friction in real-world operations",
+                "Secure backend patterns with access restrictions and session-aware operation",
             ],
             challenges: [
-                "Designed role-specific workflows while keeping application data scoped to the authenticated user through PostgreSQL Row Level Security",
-                "Connected the React client to an Express API with bearer-token authentication while keeping Supabase responsible for passwords and sessions",
+                "Structured role-specific data visibility to prevent cross-user access while preserving workflow continuity",
+                "Connected frontend actions to secure backend processes with consistent authorization and session handling",
+                "Kept the service experience intuitive even as business rules became more complex",
             ],
-            role: "My Role",
-            myRole: "Full-stack development — React frontend, Express API, Supabase-backed data model, authentication flows, role-based experiences, and marketplace workflows.",
+            role: "System Design & Access Operations",
+            myRole: "Worked across the frontend, API, and data model to establish a clear operational system with role boundaries, workflow integrity, and secure business interactions.",
             techTags: [
-                { label: "React" },
-                { label: "TypeScript" },
-                { label: "Vite" },
-                { label: "Tailwind CSS" },
-                { label: "Node.js" },
+                { label: "RBAC" },
                 { label: "Express" },
                 { label: "Supabase" },
                 { label: "PostgreSQL" },
-                { label: "RBAC" },
-                { label: "React Leaflet" },
+                { label: "React" },
+                { label: "TypeScript" },
+                { label: "Access Control" },
+                { label: "Business Workflows" },
             ],
             githubUrl: "https://github.com/Ka-few/Bull-Semen-Catalog",
             liveUrl: "https://digital-bull-catalog-amber.vercel.app/",
             apiUrl: "https://bull-catalog.onrender.com/",
         },
         {
-            title: "Beauty Salon Management System",
-            category: "Business System · Web App · Scheduling",
+            title: "Salon Service Operations Dashboard",
+            category: "Business Systems · Scheduling · Service Reliability",
             summary:
-                "A web-based salon management application with appointment scheduling, customer management, staff authentication, and business reporting — built with Flask, React, and PostgreSQL.",
+                "An internal business workflow system for scheduling appointments, tracking customers, and monitoring service performance so that daily operations remain organized and predictable.",
             problem:
-                "A beauty salon managed appointments through a mix of WhatsApp messages and a paper diary, leading to scheduling conflicts, no customer history, and no reporting on revenue or service popularity.",
+                "The salon was running appointment flow through fragmented communication and informal tracking, which led to scheduling errors, poor record visibility, and weak reporting for service performance.",
             solution:
-                "A full-stack web application where staff log in to manage appointments via a calendar interface, customers are searchable with service history, and owners access revenue and appointment analytics. Built with a Flask REST API backend and a React frontend.",
+                "Built a structured operational platform where staff can manage appointments, review customer history, and access reporting dashboards. The system reduces manual errors and makes service performance easier to monitor and improve.",
             highlights: [
-                "Appointment scheduling — calendar-based booking interface with conflict detection",
-                "Customer management — searchable profiles with service history and visit frequency",
-                "JWT authentication with role-based access for Admin and Staff roles",
-                "Business reporting — revenue by period, popular services, and stylist performance",
-                "Flask REST API with PostgreSQL — normalized schema for appointments, customers, and services",
-                "Responsive React frontend with clean, minimal UI for daily salon operations",
+                "Appointment scheduling logic with conflict detection to reduce operation errors",
+                "Customer record management and service history tracking for support continuity",
+                "Role-aware access for admins and staff to prevent misuse or inconsistent updates",
+                "Reporting on revenue patterns, popular services, and staff productivity",
+                "REST API architecture for predictable backend behavior and supportable data flows",
+                "Clean frontend design focused on operational clarity for business users",
             ],
             challenges: [
-                "Implemented calendar-based appointment conflict detection that accounts for variable service durations and stylist availability",
-                "Designed a PostgreSQL schema that efficiently supports both transactional operations and analytical reporting queries",
+                "Modeled appointment scheduling logic to reflect real business constraints, including timing variations and staff availability",
+                "Designed a data schema that supported both transactional day-to-day work and operational reporting without unnecessary complexity",
+                "Made the platform easy to support as staff workflows evolved over time",
             ],
-            role: "My Role",
-            myRole: "Solo developer — Flask API design, PostgreSQL schema, React frontend, authentication system, scheduling logic, and reporting module.",
+            role: "Support & Operational Systems Build",
+            myRole: "Owned the end-to-end business workflow — from scheduling logic and customer data model to the API and reporting layer needed for day-to-day service reliability.",
             techTags: [
                 { label: "Flask" },
                 { label: "Python" },
@@ -397,7 +383,7 @@ export default function CaseStudies() {
                 { label: "PostgreSQL" },
                 { label: "JWT Auth" },
                 { label: "REST APIs" },
-                { label: "JavaScript" },
+                { label: "Service Workflows" },
             ],
             githubUrl: "https://github.com/Ka-few/Beauty-parlor-app",
             liveUrl: "https://beauty-parlor-app-ztgj.vercel.app/",
@@ -407,10 +393,10 @@ export default function CaseStudies() {
     return (
         <section id="case-studies" className="section py-20">
             <div className="mb-14">
-                <div className="label mb-2">◈ Featured Projects</div>
-                <h2 className="heading-lg mb-4">Full Stack Software Projects</h2>
+                <div className="label mb-2">◈ Featured Work</div>
+                <h2 className="heading-lg mb-4">Systems, Support & Reliability Projects</h2>
                 <p className="text-slate max-w-2xl">
-                    Production-ready systems spanning conversational AI, enterprise business platforms, AI-powered applications, and modern web development — built for real businesses with real users.
+                    Real-world systems work spanning integrations, business platforms, automation, troubleshooting workflows, and resilient application support for teams and customers.
                 </p>
             </div>
 

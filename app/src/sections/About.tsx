@@ -6,26 +6,25 @@ import { useRef } from "react";
 import { CheckCircle } from "lucide-react";
 
 const corePrinciples = [
-    "Designed and developed scalable full-stack applications using React, TypeScript, Express.js, and PostgreSQL",
-    "Built conversational AI solutions integrating Twilio WhatsApp Business APIs with LLM backends",
-    "Engineered GraphQL and REST API architectures powering enterprise-grade frontend and backend communication",
-    "Integrated AI-powered capabilities — OpenAI, LLM APIs, prompt engineering — into production business applications",
-    "Developed secure, role-based authentication systems for multi-user enterprise platforms",
-    "Leveraged GitHub Copilot, Claude, Cursor AI, and ChatGPT to accelerate development and maintain high output quality",
-    "Collaborated across the complete software development lifecycle from planning through deployment",
+    "Investigated application, API, and backend issues across UI, service, database, and infrastructure layers to reduce user-impacting incidents.",
+    "Reproduced faults, reviewed logs and events, and traced root causes through REST APIs, SQL, Linux systems, and Kubernetes resources.",
+    "Worked with production safety principles: validating changes, documenting findings, and escalating with clear evidence and rollback awareness.",
+    "Handled customer-facing support with clear communication, technical explanation, ownership, and structured follow-up through resolution.",
+    "Used Python, Bash, and JavaScript for automation, diagnostics, data processing, and operational efficiency improvements.",
+    "Collaborated with GitHub/GitLab workflows and CI/CD processes while building a stronger operational mindset around reliability and service health.",
 ];
 
 const focuses = [
-    "Full Stack Software Engineering (React, Node.js, Python)",
-    "AI-Powered Application Development",
-    "Conversational AI & WhatsApp Platforms",
-    "Twilio & Messaging API Integration",
-    "GraphQL & REST API Design",
-    "Enterprise Business Systems",
-    "TypeScript & Modern Frontend Architecture",
-    "PostgreSQL & Database Engineering",
-    "AI-Assisted Development (Copilot, Claude, Cursor AI)",
-    "Secure Authentication & RBAC",
+    "Technical Support & Incident Investigation",
+    "Linux Systems Troubleshooting",
+    "Kubernetes & Container Diagnostics",
+    "REST API & Backend Debugging",
+    "SQL & Database Validation",
+    "Python & Bash Automation",
+    "GitHub/GitLab & CI/CD Workflows",
+    "Customer Communication & Escalation",
+    "Production Safety & Reliability Mindset",
+    "Observability, Logs, and Root Cause Analysis",
 ];
 
 export default function About() {
@@ -45,7 +44,7 @@ export default function About() {
                     className="label"
                     style={{ marginBottom: "0.75rem" }}
                 >
-                    ◈ About
+                    ◈ Profile
                 </motion.div>
 
                 <div
@@ -66,9 +65,9 @@ export default function About() {
                             className="heading-lg"
                             style={{ marginBottom: "1.5rem" }}
                         >
-                            I'm Francis Njoroge Wanjiru,<br />
+                            I&apos;m Francis Njoroge Wanjiru,<br />
                             <span className="text-gradient-accent" style={{ fontSize: "0.58em", display: "block", marginTop: "0.5rem" }}>
-                                Full Stack Software Engineer — AI & Conversational Platforms
+                                Technical Support Engineer — Aspiring SRE
                             </span>
                         </motion.h2>
 
@@ -83,7 +82,7 @@ export default function About() {
                                 fontSize: "1.05rem",
                             }}
                         >
-                            I'm a Full Stack Software Engineer with 4+ years of experience building production-grade web applications, AI-powered platforms, and enterprise business systems. I work across the full stack — from React and TypeScript frontends to Node.js, Python, and GraphQL backends — with a strong focus on delivering software that solves real business problems.
+                            Aspiring SRE with 7+ years in technical support and incident investigation, focused on root-cause analysis, API debugging, Linux systems, Kubernetes, SQL validation, and customer-facing issue resolution.
                         </motion.p>
 
                         <motion.p
@@ -97,7 +96,7 @@ export default function About() {
                                 fontSize: "1.05rem",
                             }}
                         >
-                            My recent work spans conversational AI systems built on Twilio and the WhatsApp Business API, enterprise CRM and POS platforms, and AI-integrated web applications using OpenAI APIs and LLM orchestration. I'm experienced with GraphQL and REST API design, PostgreSQL, and modern frontend architecture using Redux and Zustand.
+                            I work across the full operational stack: reproducing incidents, reviewing logs, validating service behavior, and tracing failures through APIs, databases, and infrastructure. I bring a strong reliability mindset, clear communication, and a practical understanding of production safety.
                         </motion.p>
 
                         <motion.p
@@ -111,7 +110,7 @@ export default function About() {
                                 fontSize: "1.05rem",
                             }}
                         >
-                            I work with AI-assisted development tools — GitHub Copilot, Claude, Cursor AI, and ChatGPT — as a core part of my workflow, which allows me to ship high-quality features faster without sacrificing code maintainability or system design quality.
+                            I am building toward a career in Site Reliability Engineering by strengthening my skills in observability, automation, Kubernetes, and resilient system operations.
                         </motion.p>
 
                         <motion.div
@@ -126,8 +125,8 @@ export default function About() {
                                 marginBottom: "2rem"
                             }}
                         >
-                            <h4 style={{ color: "var(--white)", fontWeight: 700, marginBottom: "0.5rem" }}>Engineering philosophy:</h4>
-                            <p style={{ color: "var(--accent)" }}><em>Build software that creates real value — for the users who rely on it and the businesses that depend on it.</em></p>
+                            <h4 style={{ color: "var(--white)", fontWeight: 700, marginBottom: "0.5rem" }}>Operational philosophy:</h4>
+                            <p style={{ color: "var(--accent)" }}><em>Reliable systems are built through clear diagnosis, disciplined automation, and calm, evidence-driven incident response.</em></p>
                         </motion.div>
 
                         <motion.p
@@ -175,7 +174,7 @@ export default function About() {
                             <div className="relative w-48 h-48 mx-auto lg:mx-0 rounded-2xl overflow-hidden border-2 border-accent/30 glass transform hover:rotate-3 transition-transform duration-300">
                                 <img
                                     src="/photo.jpg"
-                                    alt="Francis Njoroge Wanjiru — Full Stack Software Engineer"
+                                    alt="Francis Njoroge Wanjiru — Technical Support Engineer and Aspiring SRE"
                                     className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
                                     onError={(e) => {
                                         (e.target as HTMLImageElement).src = "https://ui-avatars.com/api/?name=Francis+Njoroge&background=f59e0b&color=1c1917&size=200";
@@ -217,7 +216,7 @@ export default function About() {
                                 fontSize: "1rem",
                             }}
                         >
-                            I specialize in building intelligent, scalable software for companies that need more than a generic web app — from AI-powered conversational platforms and CRM systems to enterprise tools with complex authentication, reporting, and API integrations.
+                            I specialize in keeping modern digital services healthy by diagnosing incidents quickly, validating system behavior, and improving the reliability of business-critical applications. My focus is on the layers that matter most to uptime and user trust: platform health, APIs, logs, data integrity, and operational automation.
                         </motion.p>
 
                         <h3
