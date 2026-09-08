@@ -243,11 +243,11 @@ export default function CaseStudies() {
             githubUrl: "https://github.com/Ka-few/whatsapp-business-os",
         },
         {
-            title: "SheCare — Safe AI Support Workflow",
+            title: "SheCare - Your Personal AI Health Companion",
             category: "AI Operations · Health Support · Reliability",
             isTeamProject: true,
             summary:
-                "A WhatsApp-based assistive health platform designed to improve access to health information while keeping responses safe, consistent, and understandable for users.",
+                "SheCare is a privacy-focused AI health companion designed to give women, particularly underserved and vulnerable women in Africa, a safe and stigma-free way to access preliminary health information. The platform allows users to privately describe symptoms and receive AI-guided health insights, possible areas of concern, and recommendations on when to seek professional medical care. The application also uses geolocation to help users identify nearby hospitals and healthcare facilities, making it easier to transition from digital health guidance to appropriate in-person care. The project was designed around privacy, accessibility, and early health-seeking behavior, with the goal of reducing barriers that can prevent women from openly discussing sensitive health concerns.",
             problem:
                 "Users needed quick access to health-related guidance, but context, trust, and safety risks made unstructured AI responses a challenge. The support workflow had to balance accessibility with strong safety guardrails.",
             solution:
@@ -277,6 +277,7 @@ export default function CaseStudies() {
                 { label: "Node.js" },
                 { label: "Conversational AI" },
             ],
+            liveUrl: "https://shecare.africa",
         },
         {
             title: "ShambaSmart Farm Operations & Offline Resilience",
